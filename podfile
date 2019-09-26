@@ -1,0 +1,12 @@
+platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+use_modular_headers!
+
+target 'Swift5Demo' do
+
+   pod 'Alamofire'
+   pod 'Moya', '~> 13.0'
+   pod 'GodEye', '~> 1.0.0', :configurations => ['Debug']
+   pod 'MJRefresh', '~> 3.1.12'
+   
+end
