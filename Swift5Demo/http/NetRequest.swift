@@ -35,6 +35,8 @@ public class NetRequest {
             }
         }else {
             //读取缓存速度较快，无需显示hud；仅从网络加载数据时，显示hud。
+            
+            
         //    ProgressHUD.show()
         }
 
