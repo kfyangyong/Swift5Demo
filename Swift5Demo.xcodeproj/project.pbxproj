@@ -15,9 +15,6 @@
 		DD10C089233B7D650035D158 /* NetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C088233B7D650035D158 /* NetRequest.swift */; };
 		DD10C08E233B9EF60035D158 /* SaveFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C08D233B9EF60035D158 /* SaveFiles.swift */; };
 		DD10C090233BA21B0035D158 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C08F233BA21B0035D158 /* UserInfoModel.swift */; };
-		DD56730C25A6F7E1009B8351 /* NSObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD56730B25A6F7E1009B8351 /* NSObjectProtocol.swift */; };
-		DD62D3B425A82B400072D593 /* Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD62D3B325A82B400072D593 /* Equatable.swift */; };
-		DD862B0525A5B96D001AB777 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD862B0425A5B96D001AB777 /* Person.swift */; };
 		DDC60A6B2339ED6E00BEC45C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC60A6A2339ED6E00BEC45C /* AppDelegate.swift */; };
 		DDC60A6D2339ED6E00BEC45C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC60A6C2339ED6E00BEC45C /* SceneDelegate.swift */; };
 		DDC60A722339ED6E00BEC45C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC60A702339ED6E00BEC45C /* Main.storyboard */; };
@@ -62,9 +59,6 @@
 		DD10C088233B7D650035D158 /* NetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetRequest.swift; sourceTree = "<group>"; };
 		DD10C08D233B9EF60035D158 /* SaveFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFiles.swift; sourceTree = "<group>"; };
 		DD10C08F233BA21B0035D158 /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
-		DD56730B25A6F7E1009B8351 /* NSObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocol.swift; sourceTree = "<group>"; };
-		DD62D3B325A82B400072D593 /* Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatable.swift; sourceTree = "<group>"; };
-		DD862B0425A5B96D001AB777 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		DDC60A672339ED6E00BEC45C /* Swift5Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift5Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC60A6A2339ED6E00BEC45C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDC60A6C2339ED6E00BEC45C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,9 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				DDC60A9E2339FBEB00BEC45C /* HomeViewController.swift */,
-				DD862B0425A5B96D001AB777 /* Person.swift */,
-				DD56730B25A6F7E1009B8351 /* NSObjectProtocol.swift */,
-				DD62D3B325A82B400072D593 /* Equatable.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -458,7 +449,6 @@
 				DD10C07F233B6A310035D158 /* ManagerAPI.swift in Sources */,
 				DDC60AAC233A126800BEC45C /* ShareViewController.swift in Sources */,
 				DDC60A6B2339ED6E00BEC45C /* AppDelegate.swift in Sources */,
-				DD56730C25A6F7E1009B8351 /* NSObjectProtocol.swift in Sources */,
 				DD10C087233B6FE50035D158 /* StrInt.swift in Sources */,
 				DDC60AB0233A12B300BEC45C /* YYNavViewController.swift in Sources */,
 				DDC60AAA233A125900BEC45C /* WebViewController.swift in Sources */,
@@ -470,10 +460,8 @@
 				DDC60A6D2339ED6E00BEC45C /* SceneDelegate.swift in Sources */,
 				DD10C08E233B9EF60035D158 /* SaveFiles.swift in Sources */,
 				DDC60A9F2339FBEB00BEC45C /* HomeViewController.swift in Sources */,
-				DD62D3B425A82B400072D593 /* Equatable.swift in Sources */,
 				DD10C07D233B68320035D158 /* LoginViewController.swift in Sources */,
 				DD10C089233B7D650035D158 /* NetRequest.swift in Sources */,
-				DD862B0525A5B96D001AB777 /* Person.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
