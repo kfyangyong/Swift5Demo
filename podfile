@@ -8,7 +8,7 @@ target 'Swift5Demo' do
    pod 'Moya', '~> 13.0'
    pod 'MJRefresh', '~> 3.1.12'
    pod 'MBProgressHUD'
-   
+   pod 'SnapKit'
    
    pod 'PIPKit'
 

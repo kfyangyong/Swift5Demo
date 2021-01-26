@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         
         view.addSubview(tabview)
         titles =  ["可点击label - ActiveLabel",
-                   "可点击label - ActiveLabel",
+                   "内购 - appPay",
                    "可点击label - ActiveLabel",
                    "待续。。。"]
     }
@@ -50,8 +50,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            
-            break
+            let vc = ActiveLabelViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            let productId = "com.zhongyejingjishiTKT.taocan.7995"
+            PayManager.shared.startPay(productId: productId)
         default:
             break
         }
