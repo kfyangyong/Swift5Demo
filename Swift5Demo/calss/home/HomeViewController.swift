@@ -27,7 +27,8 @@ class HomeViewController: UIViewController {
         view.addSubview(tabview)
         titles =  ["可点击label - ActiveLabel",
                    "内购 - appPay",
-                   "可点击label - ActiveLabel",
+                   "视频播放器",
+                   "GCD线程",
                    "待续。。。"]
     }
     
@@ -55,6 +56,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             let productId = "com.zhongyejingjishiTKT.taocan.7995"
             PayManager.shared.startPay(productId: productId)
+            PayManager.shared.showMsg = { _ in
+                self.tabview.reloadData()
+            }
+        case 2:
+            let vc = YYPlayViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 3:
+            let vc = GCDViewController()
+            navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }
