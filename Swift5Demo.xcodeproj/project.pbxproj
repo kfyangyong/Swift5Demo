@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		954B8FF96652F85F791444E7 /* libPods-Swift5Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CA69610BF5329170B3D65D /* libPods-Swift5Demo.a */; };
 		DD10C07D233B68320035D158 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C07C233B68320035D158 /* LoginViewController.swift */; };
-		DD10C07F233B6A310035D158 /* ManagerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C07E233B6A310035D158 /* ManagerAPI.swift */; };
 		DD10C081233B6C030035D158 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C080233B6C030035D158 /* MoyaConfig.swift */; };
 		DD10C087233B6FE50035D158 /* StrInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C086233B6FE50035D158 /* StrInt.swift */; };
 		DD10C089233B7D650035D158 /* NetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C088233B7D650035D158 /* NetRequest.swift */; };
 		DD10C08E233B9EF60035D158 /* SaveFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C08D233B9EF60035D158 /* SaveFiles.swift */; };
 		DD10C090233BA21B0035D158 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C08F233BA21B0035D158 /* UserInfoModel.swift */; };
+		DD12805B25C5028D00751B98 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD12805A25C5028D00751B98 /* UserApi.swift */; };
+		DD12805D25C5051700751B98 /* UserTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD12805C25C5051700751B98 /* UserTargetType.swift */; };
 		DD26A63225B92F480041AF8F /* PayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26A63125B92F480041AF8F /* PayManager.swift */; };
+		DD4267FC25C4131000CB98A1 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FB25C4131000CB98A1 /* Api.swift */; };
+		DD4267FE25C4145900CB98A1 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FD25C4145900CB98A1 /* ResultModel.swift */; };
+		DD42680025C4182200CB98A1 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FF25C4182200CB98A1 /* TargetType.swift */; };
 		DD67B40625C250B30016C60D /* GCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD67B40525C250B30016C60D /* GCDViewController.swift */; };
 		DD67B40925C294670016C60D /* AsyncAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD67B40825C294670016C60D /* AsyncAfter.swift */; };
 		DD9A026825BFEFD300E68A57 /* YYPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9A026725BFEFD300E68A57 /* YYPlayViewController.swift */; };
@@ -62,14 +66,18 @@
 		4EB37D226D5ECD7952DB46C1 /* Pods-Swift5Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Demo.release.xcconfig"; path = "Target Support Files/Pods-Swift5Demo/Pods-Swift5Demo.release.xcconfig"; sourceTree = "<group>"; };
 		8A1CC92AE09466073B4CC460 /* Pods-Swift5Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Demo.debug.xcconfig"; path = "Target Support Files/Pods-Swift5Demo/Pods-Swift5Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		DD10C07C233B68320035D158 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		DD10C07E233B6A310035D158 /* ManagerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAPI.swift; sourceTree = "<group>"; };
 		DD10C080233B6C030035D158 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
 		DD10C086233B6FE50035D158 /* StrInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrInt.swift; sourceTree = "<group>"; };
 		DD10C088233B7D650035D158 /* NetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetRequest.swift; sourceTree = "<group>"; };
 		DD10C08D233B9EF60035D158 /* SaveFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFiles.swift; sourceTree = "<group>"; };
 		DD10C08F233BA21B0035D158 /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		DD12805A25C5028D00751B98 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		DD12805C25C5051700751B98 /* UserTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTargetType.swift; sourceTree = "<group>"; };
 		DD2464C925BFF6DE00C58D82 /* Swift5Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift5Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD26A63125B92F480041AF8F /* PayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayManager.swift; sourceTree = "<group>"; };
+		DD4267FB25C4131000CB98A1 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		DD4267FD25C4145900CB98A1 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		DD4267FF25C4182200CB98A1 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		DD67B40525C250B30016C60D /* GCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewController.swift; sourceTree = "<group>"; };
 		DD67B40825C294670016C60D /* AsyncAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAfter.swift; sourceTree = "<group>"; };
 		DD9A026725BFEFD300E68A57 /* YYPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPlayViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +158,23 @@
 				DD10C08F233BA21B0035D158 /* UserInfoModel.swift */,
 			);
 			path = login;
+			sourceTree = "<group>";
+		};
+		DD12805625C4FB5300751B98 /* moyaReq */ = {
+			isa = PBXGroup;
+			children = (
+				DD10C088233B7D650035D158 /* NetRequest.swift */,
+				DD10C08D233B9EF60035D158 /* SaveFiles.swift */,
+			);
+			path = moyaReq;
+			sourceTree = "<group>";
+		};
+		DD12805725C4FC0D00751B98 /* rxmoyaRep */ = {
+			isa = PBXGroup;
+			children = (
+				DD4267FF25C4182200CB98A1 /* TargetType.swift */,
+			);
+			path = rxmoyaRep;
 			sourceTree = "<group>";
 		};
 		DD2464CD25C0195B00C58D82 /* PlayKit */ = {
@@ -264,9 +289,13 @@
 		DDC60AA1233A11D800BEC45C /* http */ = {
 			isa = PBXGroup;
 			children = (
-				DD10C07E233B6A310035D158 /* ManagerAPI.swift */,
+				DD12805725C4FC0D00751B98 /* rxmoyaRep */,
+				DD12805625C4FB5300751B98 /* moyaReq */,
+				DD4267FD25C4145900CB98A1 /* ResultModel.swift */,
 				DD10C080233B6C030035D158 /* MoyaConfig.swift */,
-				DD10C088233B7D650035D158 /* NetRequest.swift */,
+				DD4267FB25C4131000CB98A1 /* Api.swift */,
+				DD12805A25C5028D00751B98 /* UserApi.swift */,
+				DD12805C25C5051700751B98 /* UserTargetType.swift */,
 			);
 			path = http;
 			sourceTree = "<group>";
@@ -308,7 +337,6 @@
 			isa = PBXGroup;
 			children = (
 				DD10C086233B6FE50035D158 /* StrInt.swift */,
-				DD10C08D233B9EF60035D158 /* SaveFiles.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -511,21 +539,25 @@
 				DD9A026825BFEFD300E68A57 /* YYPlayViewController.swift in Sources */,
 				DD26A63225B92F480041AF8F /* PayManager.swift in Sources */,
 				DDA149A725B2C6A30040E1CD /* ActiveLabelViewController.swift in Sources */,
-				DD10C07F233B6A310035D158 /* ManagerAPI.swift in Sources */,
 				DDC60AAC233A126800BEC45C /* ShareViewController.swift in Sources */,
+				DD12805B25C5028D00751B98 /* UserApi.swift in Sources */,
 				DDC60A6B2339ED6E00BEC45C /* AppDelegate.swift in Sources */,
+				DD4267FC25C4131000CB98A1 /* Api.swift in Sources */,
 				DD10C087233B6FE50035D158 /* StrInt.swift in Sources */,
 				DD67B40925C294670016C60D /* AsyncAfter.swift in Sources */,
 				DDFED38725C398300056FF9C /* DispatchIOManager.swift in Sources */,
 				DDA149A925B2CADC0040E1CD /* BaseViewController.swift in Sources */,
+				DD4267FE25C4145900CB98A1 /* ResultModel.swift in Sources */,
 				DDC60AB0233A12B300BEC45C /* YYNavViewController.swift in Sources */,
 				DDC60AAA233A125900BEC45C /* WebViewController.swift in Sources */,
 				DDFED38325C2AE210056FF9C /* SuspendAndResum.swift in Sources */,
 				DDFED38525C2C0D10056FF9C /* DispatchSourceTest.swift in Sources */,
 				DDC60A9B2339FBBB00BEC45C /* MessageViewController.swift in Sources */,
 				DD67B40625C250B30016C60D /* GCDViewController.swift in Sources */,
+				DD12805D25C5051700751B98 /* UserTargetType.swift in Sources */,
 				DDC60AAE233A129700BEC45C /* YYTabbarViewController.swift in Sources */,
 				DD10C081233B6C030035D158 /* MoyaConfig.swift in Sources */,
+				DD42680025C4182200CB98A1 /* TargetType.swift in Sources */,
 				DDC60A9D2339FBCC00BEC45C /* MyViewController.swift in Sources */,
 				DD10C090233BA21B0035D158 /* UserInfoModel.swift in Sources */,
 				DDC60A6D2339ED6E00BEC45C /* SceneDelegate.swift in Sources */,

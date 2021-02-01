@@ -67,11 +67,8 @@ private extension String {
 
 /**
  4.公共参数
-
  - Todo: 配置公共参数，例如所有接口都需要传token，version，time等，就可以在这里统一处理
-
  - Note: 接口传参时可以覆盖公共参数。下面的代码只需要更改 【private var commonParams: [String: Any]?】
-
  **/
 extension URLRequest {
     //TODO：处理公共参数

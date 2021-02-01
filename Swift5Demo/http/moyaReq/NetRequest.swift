@@ -21,7 +21,11 @@ public class NetRequest {
  ///   - error: 连接服务器成功但是数据获取失败
  ///   - failure: 连接服务器失败
 
-    public class func loadData <T: TargetType>(target: T, needCache: Bool = false, cache: ((Data) -> Void)? = nil, success: @escaping((Data) -> Void), failure: ((Int?, String) ->Void)? ) {
+    public class func loadData <T: TargetType>(target: T,
+                                               needCache: Bool = false,
+                                               cache: ((Data) -> Void)? = nil,
+                                               success: @escaping((Data) -> Void),
+                                               failure: ((Int?, String) ->Void)? ) {
         
         let provider = MoyaProvider<T>(plugins: [RequestHandlingPlugin(),networkLoggerPlugin])
         
