@@ -44,7 +44,7 @@
         <!--首页-->
         <scene sceneID="hjo-rE-7T8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CD7-Cy-Au4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CD7-Cy-Au4" customClass="YYNavViewController" customModule="Swift5Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="rgQ-7b-TqM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ABJ-zm-UHH">

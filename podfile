@@ -17,6 +17,9 @@ target 'Swift5Demo' do
    #点击事件的label
    pod 'ActiveLabel'
 
+   #动画表情
+   pod 'lottie-ios'
+
 
    
 end

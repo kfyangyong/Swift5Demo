@@ -16,6 +16,15 @@ class YYNavViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        let num = self.viewControllers.count
+        guard num == 1 else {
+            viewController.hidesBottomBarWhenPushed = false
+            return super.pushViewController(viewController, animated: animated)
+        }
+        viewController.hidesBottomBarWhenPushed = true
+        super.pushViewController(viewController, animated: animated)
+    }
 
     /*
     // MARK: - Navigation

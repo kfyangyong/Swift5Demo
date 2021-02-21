@@ -29,6 +29,8 @@ class HomeViewController: UIViewController {
                    "内购 - appPay",
                    "视频播放器",
                    "GCD线程",
+                   "LottieViewController",
+                   "文件路径",
                    "待续。。。"]
     }
     
@@ -65,6 +67,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         case 3:
             let vc = GCDViewController()
             navigationController?.pushViewController(vc, animated: true)
+        case 4:
+            let vc = AniViewController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true) {
+            }
         default:
             break
         }
