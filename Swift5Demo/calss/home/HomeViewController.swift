@@ -72,6 +72,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true) {
             }
+        case 5:
+            let vc = PathViewController()
+            navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }
