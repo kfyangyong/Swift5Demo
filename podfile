@@ -4,14 +4,14 @@ use_modular_headers!
 
 target 'Swift5Demo' do
 
-   pod 'Alamofire'
-   pod 'Moya', '~> 13.0'
    pod 'Moya/RxSwift'
+   pod 'RxCocoa'
 
    pod 'MJRefresh', '~> 3.1.12'
    pod 'MBProgressHUD'
    pod 'SnapKit'
    
+   #
    pod 'PIPKit'
 
    #点击事件的label
@@ -20,6 +20,14 @@ target 'Swift5Demo' do
    #动画表情
    pod 'lottie-ios'
 
+   #颜色
+   pod 'ChameleonFramework/Swift'
 
+   #table 根据数据加载ui
+   pod 'ZJTableViewManager'
+   
+   pod 'SwiftyStarRatingView'
+   pod 'ImagePicker'
+   pod 'SKPhotoBrowser', '~> 5.0.0'
    
 end

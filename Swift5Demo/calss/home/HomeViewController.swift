@@ -8,7 +8,7 @@
 
 import UIKit
 import MBProgressHUD
-
+import RxSwift
 
 class HomeViewController: UIViewController {
     
@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
         return tab
     }()
     
+    let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +33,42 @@ class HomeViewController: UIViewController {
                    "GCD线程",
                    "LottieViewController",
                    "文件路径",
+                   "rxswift PhotosViewController",
                    "待续。。。"]
+        
+        
+        print("********emty********")
+        
+        var emtyOb = Observable<Int>.empty()
+        _ = emtyOb.subscribe(onNext: { (number) in
+            print("订阅:",number)
+        }, onError: { (error) in
+            print("error:",error)
+        }, onCompleted: {
+            print("完成回调")
+        }) {
+            print("释放回调")
+        }
+    
+        print("********just********")
+        //MARK:  just
+        // 单个信号序列创建
+        let array = ["LG_Cooci","LG_Kody"]
+//        Observable<[String]>.just(array)
+//            .subscribe { (event) in
+//                print("event" + "\(event)")
+//            }.disposed(by: disposeBag)
+
+        _ = Observable<[String]>.just(array).subscribe(onNext: { (number) in
+            print("订阅:",number)
+        }, onError: { (error) in
+            print("error:",error)
+        }, onCompleted: {
+            print("完成回调")
+        }) {
+            print("释放回调")
+        }
+
     }
     
     
@@ -74,6 +111,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             }
         case 5:
             let vc = PathViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 5:
+            let vc = PhotosViewController()
             navigationController?.pushViewController(vc, animated: true)
         default:
             break
