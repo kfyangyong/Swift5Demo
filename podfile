@@ -30,4 +30,7 @@ target 'Swift5Demo' do
    pod 'ImagePicker'
    pod 'SKPhotoBrowser', '~> 5.0.0'
    
+   #多页面
+   pod 'JXSegmentedView'
+   
 end

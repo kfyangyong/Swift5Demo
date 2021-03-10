@@ -1,27 +1,31 @@
 //
-//  TabManagerViewController.swift
+//  BottomViewController.swift
 //  Swift5Demo
 //
-//  Created by 阿永 on 2021/3/4.
+//  Created by 阿永 on 2021/3/8.
 //  Copyright © 2021 com.ayong.myapp. All rights reserved.
 //
 
 import UIKit
 import ZJTableViewManager
 
-class TabManagerViewController: TiBaseViewController {
+class BottomView: UIView {
 
     var manager: ZJTableViewManager?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setUI()
         configTab()
         initData()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func setUI() {
-        view.addSubview(tableView)
+        addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
@@ -36,7 +40,6 @@ class TabManagerViewController: TiBaseViewController {
         manager?.register(TiLableCell.self, TiLableCellItem.self)
         manager?.register(TiImageCell.self, TiImageCellItem.self)
         manager?.register(OptionAnswerCell.self, OptionAnswerCellItem.self)
-        manager?.register(AnalysisCell.self, AnalysisCellItem.self)
         //add section
         let section = ZJTableViewSection(headerHeight: 10, color: UIColor.red)
         self.manager?.add(section: section)
@@ -82,23 +85,15 @@ class TabManagerViewController: TiBaseViewController {
         optionItem4.index = "D"
         optionItem4.autoHeight(manager!)
         categorySection.add(item: optionItem4)
-        optionItem4.selectionHandler = { [weak self] _ in
-            
-        }
         
-        
-        let answerItem = AnalysisCellItem()
-        answerItem.answerInfo = "答案"
-        answerItem.autoHeight(manager!)
-        categorySection.add(item: answerItem)
     }
     
     //MARK: - lazy
     lazy var tableView: UITableView = {
-        let tab = UITableView(frame: view.bounds, style: .plain)
+        let tab = UITableView(frame: bounds, style: .plain)
         tab.estimatedRowHeight = 60
         tab.rowHeight = UITableView.automaticDimension
         return tab
     }()
-
+    
 }

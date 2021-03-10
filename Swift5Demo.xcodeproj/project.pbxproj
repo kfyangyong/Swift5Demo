@@ -51,6 +51,9 @@
 		DDC60AAC233A126800BEC45C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC60AAB233A126800BEC45C /* ShareViewController.swift */; };
 		DDC60AAE233A129700BEC45C /* YYTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC60AAD233A129700BEC45C /* YYTabbarViewController.swift */; };
 		DDC60AB0233A12B300BEC45C /* YYNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC60AAF233A12B300BEC45C /* YYNavViewController.swift */; };
+		DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892CD25F5D26500FF4085 /* TiBaseViewController.swift */; };
+		DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892D025F5F51100FF4085 /* TiViewController.swift */; };
+		DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892D225F5FD1C00FF4085 /* BottomView.swift */; };
 		DDEF1B4C25C7C81B001707CB /* AniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF1B4B25C7C81B001707CB /* AniViewController.swift */; };
 		DDFED38325C2AE210056FF9C /* SuspendAndResum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFED38225C2AE210056FF9C /* SuspendAndResum.swift */; };
 		DDFED38525C2C0D10056FF9C /* DispatchSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFED38425C2C0D10056FF9C /* DispatchSourceTest.swift */; };
@@ -128,6 +131,9 @@
 		DDC60AAB233A126800BEC45C /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		DDC60AAD233A129700BEC45C /* YYTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTabbarViewController.swift; sourceTree = "<group>"; };
 		DDC60AAF233A12B300BEC45C /* YYNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavViewController.swift; sourceTree = "<group>"; };
+		DDD892CD25F5D26500FF4085 /* TiBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiBaseViewController.swift; sourceTree = "<group>"; };
+		DDD892D025F5F51100FF4085 /* TiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiViewController.swift; sourceTree = "<group>"; };
+		DDD892D225F5FD1C00FF4085 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		DDEF1B4B25C7C81B001707CB /* AniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniViewController.swift; sourceTree = "<group>"; };
 		DDFED38225C2AE210056FF9C /* SuspendAndResum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendAndResum.swift; sourceTree = "<group>"; };
 		DDFED38425C2C0D10056FF9C /* DispatchSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchSourceTest.swift; sourceTree = "<group>"; };
@@ -221,9 +227,12 @@
 		DD6709B825F0AE7300C9927D /* TabManager */ = {
 			isa = PBXGroup;
 			children = (
+				DDD892CC25F5D24000FF4085 /* Basevc */,
 				DD6709EC25F0BADE00C9927D /* Models */,
 				DD6709EB25F0BAC800C9927D /* Views */,
 				DD6709C025F0B4AD00C9927D /* TabManagerViewController.swift */,
+				DDD892D225F5FD1C00FF4085 /* BottomView.swift */,
+				DDD892D025F5F51100FF4085 /* TiViewController.swift */,
 			);
 			path = TabManager;
 			sourceTree = "<group>";
@@ -447,6 +456,14 @@
 			path = base;
 			sourceTree = "<group>";
 		};
+		DDD892CC25F5D24000FF4085 /* Basevc */ = {
+			isa = PBXGroup;
+			children = (
+				DDD892CD25F5D26500FF4085 /* TiBaseViewController.swift */,
+			);
+			path = Basevc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -629,6 +646,7 @@
 				DD202F3E25F1FD41008BE9A6 /* AnalysisCell.swift in Sources */,
 				DD9A026825BFEFD300E68A57 /* YYPlayViewController.swift in Sources */,
 				DD26A63225B92F480041AF8F /* PayManager.swift in Sources */,
+				DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */,
 				DDA149A725B2C6A30040E1CD /* ActiveLabelViewController.swift in Sources */,
 				DDC60AAC233A126800BEC45C /* ShareViewController.swift in Sources */,
 				DD12805B25C5028D00751B98 /* UserApi.swift in Sources */,
@@ -663,6 +681,8 @@
 				DD7E08EF25F0BBF1002281D4 /* TiLableCell.swift in Sources */,
 				DD10C07D233B68320035D158 /* LoginViewController.swift in Sources */,
 				DD10C089233B7D650035D158 /* NetRequest.swift in Sources */,
+				DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */,
+				DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */,
 				DD7E08F725F0CDDF002281D4 /* OptionAnswerCell.swift in Sources */,
 				DD9D921625E205F20024F933 /* PathViewController.swift in Sources */,
 			);

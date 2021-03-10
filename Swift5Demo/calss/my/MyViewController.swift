@@ -45,7 +45,7 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = TabManagerViewController()
+        let vc = TiViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }
