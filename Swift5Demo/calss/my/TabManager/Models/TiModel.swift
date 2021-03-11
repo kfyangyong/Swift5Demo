@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct LiveExplainListModel: Codable {
+struct ExplainListModel: Codable {
     var QType: String! = ""
     var QContent: String! = ""
     enum CodingKeys: String, CodingKey {
@@ -25,7 +25,7 @@ struct LiveExplainListModel: Codable {
         try container.encode(QContent, forKey: .QContent)
     }
 }
-struct LiveKaoDianListModel: Codable {
+struct KaoDianListModel: Codable {
     var KaoDianId: String! = ""
     var KaoDianName: String! = ""
     enum CodingKeys: String, CodingKey {
@@ -42,7 +42,7 @@ struct LiveKaoDianListModel: Codable {
         try container.encode(KaoDianName, forKey: .KaoDianName)
     }
 }
-struct LiveSbjContentListModel: Codable {
+struct SbjContentListModel: Codable {
     var QType: String! = ""
     var QContent: String! = ""
     enum CodingKeys: String, CodingKey {
@@ -59,7 +59,7 @@ struct LiveSbjContentListModel: Codable {
         try container.encode(QContent, forKey: .QContent)
     }
 }
-struct LiveSbjChoiceModel: Codable {
+struct SbjChoiceModel: Codable {
     var Label: String! = ""
     var Text: String! = ""
     enum CodingKeys: String, CodingKey {
@@ -76,22 +76,22 @@ struct LiveSbjChoiceModel: Codable {
         try container.encode(Text, forKey: .Text)
     }
 }
-struct LiveQuestionsModel: Codable {
+struct QuestionsModel: Codable {
     var IsLastError: String! = ""
     var DoCount: String! = ""
     var SbjNanDu: String! = ""
-    var ExplainList: [LiveExplainListModel]?
+    var ExplainList: [ExplainListModel]?
     var SbjType: String! = ""
     var RightCount: String! = ""
     var SbjId: String! = ""
     var TiHao: String! = ""
     var Answer: String! = ""
-    var KaoDianList: [LiveKaoDianListModel]?
+    var KaoDianList: [KaoDianListModel]?
     var LanMuId: String! = ""
     var LastAnswer: String! = ""
     var QuanZhanZuoDa: String! = ""
     var YiCuoXiang: String! = ""
-    var SbjContentList: [LiveSbjContentListModel]?
+    var SbjContentList: [SbjContentListModel]?
     var FenXiangLianJie: String! = ""
     var UserAllCount: String! = ""
     var ShouCangId: String! = ""
@@ -99,7 +99,7 @@ struct LiveQuestionsModel: Codable {
     var SbjTypeName: String! = ""
     var Score: String! = ""
     var SbjContent: String! = ""
-    var SbjChoice: [LiveSbjChoiceModel]?
+    var SbjChoice: [SbjChoiceModel]?
     var UserRightCount: String! = ""
     var TypeLeiId: String! = ""
     var YongShiTime: String! = ""
@@ -111,18 +111,18 @@ struct LiveQuestionsModel: Codable {
         IsLastError = try? container.decode(String.self, forKey: .IsLastError)
         DoCount = try? container.decode(String.self, forKey: .DoCount)
         SbjNanDu = try? container.decode(String.self, forKey: .SbjNanDu)
-        ExplainList = try? container.decode([LiveExplainListModel].self, forKey: .ExplainList)
+        ExplainList = try? container.decode([ExplainListModel].self, forKey: .ExplainList)
         SbjType = try? container.decode(String.self, forKey: .SbjType)
         RightCount = try? container.decode(String.self, forKey: .RightCount)
         SbjId = try? container.decode(String.self, forKey: .SbjId)
         TiHao = try? container.decode(String.self, forKey: .TiHao)
         Answer = try? container.decode(String.self, forKey: .Answer)
-        KaoDianList = try? container.decode([LiveKaoDianListModel].self, forKey: .KaoDianList)
+        KaoDianList = try? container.decode([KaoDianListModel].self, forKey: .KaoDianList)
         LanMuId = try? container.decode(String.self, forKey: .LanMuId)
         LastAnswer = try? container.decode(String.self, forKey: .LastAnswer)
         QuanZhanZuoDa = try? container.decode(String.self, forKey: .QuanZhanZuoDa)
         YiCuoXiang = try? container.decode(String.self, forKey: .YiCuoXiang)
-        SbjContentList = try? container.decode([LiveSbjContentListModel].self, forKey: .SbjContentList)
+        SbjContentList = try? container.decode([SbjContentListModel].self, forKey: .SbjContentList)
         FenXiangLianJie = try? container.decode(String.self, forKey: .FenXiangLianJie)
         UserAllCount = try? container.decode(String.self, forKey: .UserAllCount)
         ShouCangId = try? container.decode(String.self, forKey: .ShouCangId)
@@ -130,7 +130,7 @@ struct LiveQuestionsModel: Codable {
         SbjTypeName = try? container.decode(String.self, forKey: .SbjTypeName)
         Score = try? container.decode(String.self, forKey: .Score)
         SbjContent = try? container.decode(String.self, forKey: .SbjContent)
-        SbjChoice = try? container.decode([LiveSbjChoiceModel].self, forKey: .SbjChoice)
+        SbjChoice = try? container.decode([SbjChoiceModel].self, forKey: .SbjChoice)
         UserRightCount = try? container.decode(String.self, forKey: .UserRightCount)
         TypeLeiId = try? container.decode(String.self, forKey: .TypeLeiId)
         YongShiTime = try? container.decode(String.self, forKey: .YongShiTime)
@@ -168,7 +168,7 @@ struct LiveQuestionsModel: Codable {
 struct TiModel: Codable {
     var IsBaoCun: String! = ""
     var QuanZhanScore: String! = ""
-    var Questions: [LiveQuestionsModel]?
+    var Questions: [QuestionsModel]?
     var UserGroupId: String! = ""
     var YiZuoTiMuShu: String! = ""
     var PaperId: String! = ""
@@ -182,7 +182,7 @@ struct TiModel: Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         IsBaoCun = try? container.decode(String.self, forKey: .IsBaoCun)
         QuanZhanScore = try? container.decode(String.self, forKey: .QuanZhanScore)
-        Questions = try? container.decode([LiveQuestionsModel].self, forKey: .Questions)
+        Questions = try? container.decode([QuestionsModel].self, forKey: .Questions)
         UserGroupId = try? container.decode(String.self, forKey: .UserGroupId)
         YiZuoTiMuShu = try? container.decode(String.self, forKey: .YiZuoTiMuShu)
         PaperId = try? container.decode(String.self, forKey: .PaperId)

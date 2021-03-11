@@ -11,7 +11,7 @@ import ZJTableViewManager
 
 class TiImageCellItem: ZJTableViewItem {
     var iconName: String?
-    
+    var bigImagBlock: (()->())?
 }
 
 ///题目 材料文字 试题材料内容
@@ -38,15 +38,26 @@ class TiImageCell: UITableViewCell, ZJCellProtocol {
         img.image = UIImage(named: name)
     }
     
+    @objc func btnclick(){
+        item.bigImagBlock?()
+    }
+    
     
     //MARK: - ui
     private func setUI() {
         contentView.addSubview(img)
+        contentView.addSubview(btn)
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
         img.snp.makeConstraints { (make) in
+            make.left.equalTo(15)
+            make.top.bottom.equalToSuperview()
+            make.right.equalTo(-15)
+            make.height.equalTo(80)
+        }
+        btn.snp.makeConstraints { (make) in
             make.left.equalTo(15)
             make.top.bottom.equalToSuperview()
             make.right.equalTo(-15)
@@ -58,6 +69,12 @@ class TiImageCell: UITableViewCell, ZJCellProtocol {
         let icon = UIImageView()
         icon.contentMode = .scaleAspectFit
         return icon
+    }()
+    
+    lazy var btn: UIButton = {
+        let btn = UIButton()
+        btn.addTarget(self, action: #selector(btnclick), for: .touchUpInside)
+        return btn
     }()
 }
 

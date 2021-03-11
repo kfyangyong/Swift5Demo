@@ -51,6 +51,11 @@
 		DDC60AAC233A126800BEC45C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC60AAB233A126800BEC45C /* ShareViewController.swift */; };
 		DDC60AAE233A129700BEC45C /* YYTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC60AAD233A129700BEC45C /* YYTabbarViewController.swift */; };
 		DDC60AB0233A12B300BEC45C /* YYNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC60AAF233A12B300BEC45C /* YYNavViewController.swift */; };
+		DDD1E9D825F86CD300E49CF6 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1E9D725F86CD300E49CF6 /* AnswerModel.swift */; };
+		DDD1E9DA25F8776E00E49CF6 /* TiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1E9D925F8776E00E49CF6 /* TiConfig.swift */; };
+		DDD1E9E625F8A0FC00E49CF6 /* PaixuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1E9E525F8A0FC00E49CF6 /* PaixuViewController.swift */; };
+		DDD1E9E825F8B2BF00E49CF6 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1E9E725F8B2BF00E49CF6 /* Array.swift */; };
+		DDD1E9ED25F8BE4500E49CF6 /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD1E9EC25F8BE4500E49CF6 /* SortView.swift */; };
 		DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892CD25F5D26500FF4085 /* TiBaseViewController.swift */; };
 		DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892D025F5F51100FF4085 /* TiViewController.swift */; };
 		DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892D225F5FD1C00FF4085 /* BottomView.swift */; };
@@ -131,6 +136,11 @@
 		DDC60AAB233A126800BEC45C /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		DDC60AAD233A129700BEC45C /* YYTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTabbarViewController.swift; sourceTree = "<group>"; };
 		DDC60AAF233A12B300BEC45C /* YYNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavViewController.swift; sourceTree = "<group>"; };
+		DDD1E9D725F86CD300E49CF6 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
+		DDD1E9D925F8776E00E49CF6 /* TiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiConfig.swift; sourceTree = "<group>"; };
+		DDD1E9E525F8A0FC00E49CF6 /* PaixuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaixuViewController.swift; sourceTree = "<group>"; };
+		DDD1E9E725F8B2BF00E49CF6 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		DDD1E9EC25F8BE4500E49CF6 /* SortView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortView.swift; sourceTree = "<group>"; };
 		DDD892CD25F5D26500FF4085 /* TiBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiBaseViewController.swift; sourceTree = "<group>"; };
 		DDD892D025F5F51100FF4085 /* TiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiViewController.swift; sourceTree = "<group>"; };
 		DDD892D225F5FD1C00FF4085 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
@@ -253,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				DD7E08F225F0C600002281D4 /* TiModel.swift */,
+				DDD1E9D725F86CD300E49CF6 /* AnswerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -392,6 +403,8 @@
 		DDC60AA2233A11E900BEC45C /* home */ = {
 			isa = PBXGroup;
 			children = (
+				DDE68DC725F9FC0C00F39601 /* New Group */,
+				DDD1E9E425F8A0DA00E49CF6 /* paixu */,
 				DD97203525E3978A003E1FB1 /* Rxwift */,
 				DD9D921425E205AD0024F933 /* Path */,
 				DD26A63025B92F140041AF8F /* Pay */,
@@ -433,6 +446,7 @@
 			isa = PBXGroup;
 			children = (
 				DD10C086233B6FE50035D158 /* StrInt.swift */,
+				DDD1E9E725F8B2BF00E49CF6 /* Array.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -456,12 +470,29 @@
 			path = base;
 			sourceTree = "<group>";
 		};
+		DDD1E9E425F8A0DA00E49CF6 /* paixu */ = {
+			isa = PBXGroup;
+			children = (
+				DDD1E9E525F8A0FC00E49CF6 /* PaixuViewController.swift */,
+				DDD1E9EC25F8BE4500E49CF6 /* SortView.swift */,
+			);
+			path = paixu;
+			sourceTree = "<group>";
+		};
 		DDD892CC25F5D24000FF4085 /* Basevc */ = {
 			isa = PBXGroup;
 			children = (
 				DDD892CD25F5D26500FF4085 /* TiBaseViewController.swift */,
+				DDD1E9D925F8776E00E49CF6 /* TiConfig.swift */,
 			);
 			path = Basevc;
+			sourceTree = "<group>";
+		};
+		DDE68DC725F9FC0C00F39601 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -648,11 +679,13 @@
 				DD26A63225B92F480041AF8F /* PayManager.swift in Sources */,
 				DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */,
 				DDA149A725B2C6A30040E1CD /* ActiveLabelViewController.swift in Sources */,
+				DDD1E9E825F8B2BF00E49CF6 /* Array.swift in Sources */,
 				DDC60AAC233A126800BEC45C /* ShareViewController.swift in Sources */,
 				DD12805B25C5028D00751B98 /* UserApi.swift in Sources */,
 				DD6709C125F0B4AD00C9927D /* TabManagerViewController.swift in Sources */,
 				DDC60A6B2339ED6E00BEC45C /* AppDelegate.swift in Sources */,
 				DD4267FC25C4131000CB98A1 /* Api.swift in Sources */,
+				DDD1E9ED25F8BE4500E49CF6 /* SortView.swift in Sources */,
 				DD7E08F525F0CC94002281D4 /* TiTitleCell.swift in Sources */,
 				DD10C087233B6FE50035D158 /* StrInt.swift in Sources */,
 				DD67B40925C294670016C60D /* AsyncAfter.swift in Sources */,
@@ -667,8 +700,10 @@
 				DDFED38525C2C0D10056FF9C /* DispatchSourceTest.swift in Sources */,
 				DDC60A9B2339FBBB00BEC45C /* MessageViewController.swift in Sources */,
 				DD67B40625C250B30016C60D /* GCDViewController.swift in Sources */,
+				DDD1E9D825F86CD300E49CF6 /* AnswerModel.swift in Sources */,
 				DD12805D25C5051700751B98 /* UserTargetType.swift in Sources */,
 				DD97203725E39D86003E1FB1 /* PhotosViewController.swift in Sources */,
+				DDD1E9DA25F8776E00E49CF6 /* TiConfig.swift in Sources */,
 				DD7E08F125F0BEBA002281D4 /* TiImageCell.swift in Sources */,
 				DDC60AAE233A129700BEC45C /* YYTabbarViewController.swift in Sources */,
 				DD10C081233B6C030035D158 /* MoyaConfig.swift in Sources */,
@@ -682,6 +717,7 @@
 				DD10C07D233B68320035D158 /* LoginViewController.swift in Sources */,
 				DD10C089233B7D650035D158 /* NetRequest.swift in Sources */,
 				DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */,
+				DDD1E9E625F8A0FC00E49CF6 /* PaixuViewController.swift in Sources */,
 				DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */,
 				DD7E08F725F0CDDF002281D4 /* OptionAnswerCell.swift in Sources */,
 				DD9D921625E205F20024F933 /* PathViewController.swift in Sources */,

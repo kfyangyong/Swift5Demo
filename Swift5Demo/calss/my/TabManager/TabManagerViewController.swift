@@ -9,10 +9,19 @@
 import UIKit
 import ZJTableViewManager
 
+protocol TabManagerMovePro: class {
+    func Move(topH: CGFloat)
+}
+
+
 class TabManagerViewController: TiBaseViewController {
 
     var manager: ZJTableViewManager?
-
+    var titleHeader: UIView!
+    weak var delegate: TabManagerMovePro?
+    
+    private var anchorPoint: UserResizableViewAnchorPoint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -21,9 +30,20 @@ class TabManagerViewController: TiBaseViewController {
     }
     
     func setUI() {
+        titleHeader = UIView()
+        titleHeader.backgroundColor = .green;
+        titleHeader.isUserInteractionEnabled = true
+        view.addSubview(titleHeader)
+        titleHeader.snp.makeConstraints { (make) in
+            make.top.equalTo(0)
+            make.left.right.equalTo(0)
+            make.height.equalTo(44)
+        }
+        
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.top.equalTo(titleHeader.snp_bottom)
+            make.left.right.bottom.equalTo(0)
         }
     }
     
@@ -38,8 +58,7 @@ class TabManagerViewController: TiBaseViewController {
         manager?.register(OptionAnswerCell.self, OptionAnswerCellItem.self)
         manager?.register(AnalysisCell.self, AnalysisCellItem.self)
         //add section
-        let section = ZJTableViewSection(headerHeight: 10, color: UIColor.red)
-        self.manager?.add(section: section)
+
     }
     
     func initData() {
@@ -56,6 +75,14 @@ class TabManagerViewController: TiBaseViewController {
         lableCellItem.title = "关于氧化磷酸化的叙述，错误的是"
         categorySection.add(item: lableCellItem)
         
+    
+        let imgItem = TiImageCellItem()
+        imgItem.iconName = "tabbar_home"
+        imgItem.bigImagBlock = {
+            print("imgItem.bigImagBlock")
+        }
+        categorySection.add(item: imgItem)
+
         let optionItem1 = OptionAnswerCellItem()
         optionItem1.msg = "氧化磷酸化过程涉及两种呼吸链"
         optionItem1.index = "A"
@@ -101,4 +128,25 @@ class TabManagerViewController: TiBaseViewController {
         return tab
     }()
 
+}
+
+extension TabManagerViewController {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let point = touches.first?.location(in: superVC?.view) else {
+            return
+        }
+        
+//        let pointS = touches.first?.location(in: view)
+        print(point)
+//        print(pointS)
+        delegate?.Move(topH: point.y)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+    }
 }

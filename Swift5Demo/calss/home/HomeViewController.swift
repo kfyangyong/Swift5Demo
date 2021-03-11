@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
                    "LottieViewController",
                    "文件路径",
                    "rxswift PhotosViewController",
+                   "PaixuViewController",
                    "待续。。。"]
         
         
@@ -112,8 +113,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         case 5:
             let vc = PathViewController()
             navigationController?.pushViewController(vc, animated: true)
-        case 5:
+        case 6:
             let vc = PhotosViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 7:
+            
+            let vc = PaixuViewController()
             navigationController?.pushViewController(vc, animated: true)
         default:
             break

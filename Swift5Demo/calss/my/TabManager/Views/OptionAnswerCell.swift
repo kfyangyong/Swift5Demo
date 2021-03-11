@@ -61,7 +61,7 @@ class OptionAnswerCell: UITableViewCell, ZJCellProtocol {
         indexLab.snp.makeConstraints { (make) in
             make.top.equalTo(0)
             make.left.equalTo(0)
-            make.width.equalTo(42)
+            make.width.equalTo(35)
             make.height.equalTo(39)
         }
         
