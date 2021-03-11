@@ -59,6 +59,9 @@
 		DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892CD25F5D26500FF4085 /* TiBaseViewController.swift */; };
 		DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892D025F5F51100FF4085 /* TiViewController.swift */; };
 		DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892D225F5FD1C00FF4085 /* BottomView.swift */; };
+		DDE68DC925F9FC6100F39601 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE68DC825F9FC6100F39601 /* MetalView.swift */; };
+		DDE68DCD25F9FFB200F39601 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = DDE68DCC25F9FFB200F39601 /* Shaders.metal */; };
+		DDE68DCF25F9FFE800F39601 /* MetalView03.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE68DCE25F9FFE800F39601 /* MetalView03.swift */; };
 		DDEF1B4C25C7C81B001707CB /* AniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF1B4B25C7C81B001707CB /* AniViewController.swift */; };
 		DDFED38325C2AE210056FF9C /* SuspendAndResum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFED38225C2AE210056FF9C /* SuspendAndResum.swift */; };
 		DDFED38525C2C0D10056FF9C /* DispatchSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFED38425C2C0D10056FF9C /* DispatchSourceTest.swift */; };
@@ -144,6 +147,9 @@
 		DDD892CD25F5D26500FF4085 /* TiBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiBaseViewController.swift; sourceTree = "<group>"; };
 		DDD892D025F5F51100FF4085 /* TiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiViewController.swift; sourceTree = "<group>"; };
 		DDD892D225F5FD1C00FF4085 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		DDE68DC825F9FC6100F39601 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		DDE68DCC25F9FFB200F39601 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		DDE68DCE25F9FFE800F39601 /* MetalView03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView03.swift; sourceTree = "<group>"; };
 		DDEF1B4B25C7C81B001707CB /* AniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniViewController.swift; sourceTree = "<group>"; };
 		DDFED38225C2AE210056FF9C /* SuspendAndResum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendAndResum.swift; sourceTree = "<group>"; };
 		DDFED38425C2C0D10056FF9C /* DispatchSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchSourceTest.swift; sourceTree = "<group>"; };
@@ -403,7 +409,7 @@
 		DDC60AA2233A11E900BEC45C /* home */ = {
 			isa = PBXGroup;
 			children = (
-				DDE68DC725F9FC0C00F39601 /* New Group */,
+				DDE68DC725F9FC0C00F39601 /* metalcode */,
 				DDD1E9E425F8A0DA00E49CF6 /* paixu */,
 				DD97203525E3978A003E1FB1 /* Rxwift */,
 				DD9D921425E205AD0024F933 /* Path */,
@@ -488,11 +494,22 @@
 			path = Basevc;
 			sourceTree = "<group>";
 		};
-		DDE68DC725F9FC0C00F39601 /* New Group */ = {
+		DDE68DC725F9FC0C00F39601 /* metalcode */ = {
 			isa = PBXGroup;
 			children = (
+				DDE68DC825F9FC6100F39601 /* MetalView.swift */,
+				DDE68DCB25F9FF9D00F39601 /* 03 */,
 			);
-			path = "New Group";
+			path = metalcode;
+			sourceTree = "<group>";
+		};
+		DDE68DCB25F9FF9D00F39601 /* 03 */ = {
+			isa = PBXGroup;
+			children = (
+				DDE68DCC25F9FFB200F39601 /* Shaders.metal */,
+				DDE68DCE25F9FFE800F39601 /* MetalView03.swift */,
+			);
+			path = 03;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -697,11 +714,13 @@
 				DD97203C25E3AF39003E1FB1 /* CircleViewModel.swift in Sources */,
 				DDC60AAA233A125900BEC45C /* WebViewController.swift in Sources */,
 				DDFED38325C2AE210056FF9C /* SuspendAndResum.swift in Sources */,
+				DDE68DCD25F9FFB200F39601 /* Shaders.metal in Sources */,
 				DDFED38525C2C0D10056FF9C /* DispatchSourceTest.swift in Sources */,
 				DDC60A9B2339FBBB00BEC45C /* MessageViewController.swift in Sources */,
 				DD67B40625C250B30016C60D /* GCDViewController.swift in Sources */,
 				DDD1E9D825F86CD300E49CF6 /* AnswerModel.swift in Sources */,
 				DD12805D25C5051700751B98 /* UserTargetType.swift in Sources */,
+				DDE68DC925F9FC6100F39601 /* MetalView.swift in Sources */,
 				DD97203725E39D86003E1FB1 /* PhotosViewController.swift in Sources */,
 				DDD1E9DA25F8776E00E49CF6 /* TiConfig.swift in Sources */,
 				DD7E08F125F0BEBA002281D4 /* TiImageCell.swift in Sources */,
@@ -718,6 +737,7 @@
 				DD10C089233B7D650035D158 /* NetRequest.swift in Sources */,
 				DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */,
 				DDD1E9E625F8A0FC00E49CF6 /* PaixuViewController.swift in Sources */,
+				DDE68DCF25F9FFE800F39601 /* MetalView03.swift in Sources */,
 				DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */,
 				DD7E08F725F0CDDF002281D4 /* OptionAnswerCell.swift in Sources */,
 				DD9D921625E205F20024F933 /* PathViewController.swift in Sources */,
