@@ -35,7 +35,9 @@ class HomeViewController: UIViewController {
                    "文件路径",
                    "rxswift PhotosViewController",
                    "PaixuViewController",
-                   "待续。。。"]
+                   "LoginViewController",
+                   "MusicViewController",
+                   "RXViewController"]
         
         
         print("********emty********")
@@ -117,10 +119,19 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             let vc = PhotosViewController()
             navigationController?.pushViewController(vc, animated: true)
         case 7:
-            
             let vc = PaixuViewController()
             navigationController?.pushViewController(vc, animated: true)
+        case 8:
+            let vc = LoginViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 9:
+            let vc = MusicViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 10:
+            let vc = RXViewController()
+            navigationController?.pushViewController(vc, animated: true)
         default:
+           
             break
         }
     }

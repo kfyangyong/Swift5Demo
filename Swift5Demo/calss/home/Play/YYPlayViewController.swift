@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class YYPlayViewController: BaseViewController {
 
@@ -14,9 +15,22 @@ class YYPlayViewController: BaseViewController {
     let playView = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-       
+        guard let videoDevices = AVCaptureDevice.default(for: .video) else {
+            return
+        }
+        // 后置摄像头
+        let backCamera =  AVCaptureDevice(uniqueID: "com.apple.avfoundation.avcapturedevice.built-in_video:0")!
+        // 前置摄像头
+        let frontCamera = AVCaptureDevice(uniqueID: "com.apple.avfoundation.avcapturedevice.built-in_video:1")
+        // 麦克风
+        let microphone = AVCaptureDevice(uniqueID: "com.apple.avfoundation.avcapturedevice.built-in_audio:0")
+        print(videoDevices)
+
+        let input = try? AVCaptureDeviceInput(device: backCamera)
+        
+        let rateRange = backCamera.activeFormat.videoSupportedFrameRateRanges
+
     }
     
 

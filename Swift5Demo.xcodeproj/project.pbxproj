@@ -18,9 +18,11 @@
 		DD12805D25C5051700751B98 /* UserTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD12805C25C5051700751B98 /* UserTargetType.swift */; };
 		DD202F3E25F1FD41008BE9A6 /* AnalysisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD202F3D25F1FD41008BE9A6 /* AnalysisCell.swift */; };
 		DD26A63225B92F480041AF8F /* PayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26A63125B92F480041AF8F /* PayManager.swift */; };
+		DD2C9C822615BA660044CAD2 /* RXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2C9C812615BA660044CAD2 /* RXViewController.swift */; };
 		DD4267FC25C4131000CB98A1 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FB25C4131000CB98A1 /* Api.swift */; };
 		DD4267FE25C4145900CB98A1 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FD25C4145900CB98A1 /* ResultModel.swift */; };
 		DD42680025C4182200CB98A1 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FF25C4182200CB98A1 /* TargetType.swift */; };
+		DD5EBBCE261310BA00C09CE0 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5EBBCD261310BA00C09CE0 /* MusicViewController.swift */; };
 		DD6709C125F0B4AD00C9927D /* TabManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6709C025F0B4AD00C9927D /* TabManagerViewController.swift */; };
 		DD67B40625C250B30016C60D /* GCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD67B40525C250B30016C60D /* GCDViewController.swift */; };
 		DD67B40925C294670016C60D /* AsyncAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD67B40825C294670016C60D /* AsyncAfter.swift */; };
@@ -38,6 +40,7 @@
 		DD9D921825E20E790024F933 /* hanggeDB.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DD9D921725E20E790024F933 /* hanggeDB.sqlite */; };
 		DDA149A725B2C6A30040E1CD /* ActiveLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA149A625B2C6A30040E1CD /* ActiveLabelViewController.swift */; };
 		DDA149A925B2CADC0040E1CD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA149A825B2CADC0040E1CD /* BaseViewController.swift */; };
+		DDB48A992604A5EF0071E301 /* CSSystemCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB48A982604A5EF0071E301 /* CSSystemCapture.swift */; };
 		DDC60A6B2339ED6E00BEC45C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC60A6A2339ED6E00BEC45C /* AppDelegate.swift */; };
 		DDC60A722339ED6E00BEC45C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC60A702339ED6E00BEC45C /* Main.storyboard */; };
 		DDC60A742339ED6F00BEC45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDC60A732339ED6F00BEC45C /* Assets.xcassets */; };
@@ -59,6 +62,8 @@
 		DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892CD25F5D26500FF4085 /* TiBaseViewController.swift */; };
 		DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892D025F5F51100FF4085 /* TiViewController.swift */; };
 		DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD892D225F5FD1C00FF4085 /* BottomView.swift */; };
+		DDE22C41260880DC001038B8 /* CSAudioEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE22C40260880DC001038B8 /* CSAudioEncoder.swift */; };
+		DDE22C43260891A7001038B8 /* CSAudioConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE22C42260891A7001038B8 /* CSAudioConfig.swift */; };
 		DDE68DC925F9FC6100F39601 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE68DC825F9FC6100F39601 /* MetalView.swift */; };
 		DDE68DCD25F9FFB200F39601 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = DDE68DCC25F9FFB200F39601 /* Shaders.metal */; };
 		DDE68DCF25F9FFE800F39601 /* MetalView03.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE68DCE25F9FFE800F39601 /* MetalView03.swift */; };
@@ -100,9 +105,11 @@
 		DD202F3D25F1FD41008BE9A6 /* AnalysisCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisCell.swift; sourceTree = "<group>"; };
 		DD2464C925BFF6DE00C58D82 /* Swift5Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift5Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD26A63125B92F480041AF8F /* PayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayManager.swift; sourceTree = "<group>"; };
+		DD2C9C812615BA660044CAD2 /* RXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXViewController.swift; sourceTree = "<group>"; };
 		DD4267FB25C4131000CB98A1 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		DD4267FD25C4145900CB98A1 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		DD4267FF25C4182200CB98A1 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		DD5EBBCD261310BA00C09CE0 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		DD6709C025F0B4AD00C9927D /* TabManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManagerViewController.swift; sourceTree = "<group>"; };
 		DD67B40525C250B30016C60D /* GCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewController.swift; sourceTree = "<group>"; };
 		DD67B40825C294670016C60D /* AsyncAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAfter.swift; sourceTree = "<group>"; };
@@ -120,6 +127,7 @@
 		DD9D921725E20E790024F933 /* hanggeDB.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hanggeDB.sqlite; sourceTree = "<group>"; };
 		DDA149A625B2C6A30040E1CD /* ActiveLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveLabelViewController.swift; sourceTree = "<group>"; };
 		DDA149A825B2CADC0040E1CD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DDB48A982604A5EF0071E301 /* CSSystemCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSystemCapture.swift; sourceTree = "<group>"; };
 		DDC60A672339ED6E00BEC45C /* Swift5Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift5Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC60A6A2339ED6E00BEC45C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDC60A712339ED6E00BEC45C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +155,8 @@
 		DDD892CD25F5D26500FF4085 /* TiBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiBaseViewController.swift; sourceTree = "<group>"; };
 		DDD892D025F5F51100FF4085 /* TiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiViewController.swift; sourceTree = "<group>"; };
 		DDD892D225F5FD1C00FF4085 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		DDE22C40260880DC001038B8 /* CSAudioEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAudioEncoder.swift; sourceTree = "<group>"; };
+		DDE22C42260891A7001038B8 /* CSAudioConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSAudioConfig.swift; sourceTree = "<group>"; };
 		DDE68DC825F9FC6100F39601 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		DDE68DCC25F9FFB200F39601 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		DDE68DCE25F9FFE800F39601 /* MetalView03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView03.swift; sourceTree = "<group>"; };
@@ -228,6 +238,9 @@
 		DD2464CD25C0195B00C58D82 /* PlayKit */ = {
 			isa = PBXGroup;
 			children = (
+				DDB48A982604A5EF0071E301 /* CSSystemCapture.swift */,
+				DDE22C40260880DC001038B8 /* CSAudioEncoder.swift */,
+				DDE22C42260891A7001038B8 /* CSAudioConfig.swift */,
 			);
 			path = PlayKit;
 			sourceTree = "<group>";
@@ -300,6 +313,8 @@
 				DD97203625E39D86003E1FB1 /* PhotosViewController.swift */,
 				DD97203825E39DB0003E1FB1 /* PhotoWrite.swift */,
 				DD97203B25E3AF39003E1FB1 /* CircleViewModel.swift */,
+				DD5EBBCD261310BA00C09CE0 /* MusicViewController.swift */,
+				DD2C9C812615BA660044CAD2 /* RXViewController.swift */,
 			);
 			path = Rxwift;
 			sourceTree = "<group>";
@@ -697,13 +712,16 @@
 				DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */,
 				DDA149A725B2C6A30040E1CD /* ActiveLabelViewController.swift in Sources */,
 				DDD1E9E825F8B2BF00E49CF6 /* Array.swift in Sources */,
+				DDB48A992604A5EF0071E301 /* CSSystemCapture.swift in Sources */,
 				DDC60AAC233A126800BEC45C /* ShareViewController.swift in Sources */,
+				DDE22C41260880DC001038B8 /* CSAudioEncoder.swift in Sources */,
 				DD12805B25C5028D00751B98 /* UserApi.swift in Sources */,
 				DD6709C125F0B4AD00C9927D /* TabManagerViewController.swift in Sources */,
 				DDC60A6B2339ED6E00BEC45C /* AppDelegate.swift in Sources */,
 				DD4267FC25C4131000CB98A1 /* Api.swift in Sources */,
 				DDD1E9ED25F8BE4500E49CF6 /* SortView.swift in Sources */,
 				DD7E08F525F0CC94002281D4 /* TiTitleCell.swift in Sources */,
+				DD5EBBCE261310BA00C09CE0 /* MusicViewController.swift in Sources */,
 				DD10C087233B6FE50035D158 /* StrInt.swift in Sources */,
 				DD67B40925C294670016C60D /* AsyncAfter.swift in Sources */,
 				DDEF1B4C25C7C81B001707CB /* AniViewController.swift in Sources */,
@@ -729,9 +747,11 @@
 				DD42680025C4182200CB98A1 /* TargetType.swift in Sources */,
 				DDC60A9D2339FBCC00BEC45C /* MyViewController.swift in Sources */,
 				DD10C090233BA21B0035D158 /* UserInfoModel.swift in Sources */,
+				DD2C9C822615BA660044CAD2 /* RXViewController.swift in Sources */,
 				DD10C08E233B9EF60035D158 /* SaveFiles.swift in Sources */,
 				DD7E08F325F0C600002281D4 /* TiModel.swift in Sources */,
 				DDC60A9F2339FBEB00BEC45C /* HomeViewController.swift in Sources */,
+				DDE22C43260891A7001038B8 /* CSAudioConfig.swift in Sources */,
 				DD7E08EF25F0BBF1002281D4 /* TiLableCell.swift in Sources */,
 				DD10C07D233B68320035D158 /* LoginViewController.swift in Sources */,
 				DD10C089233B7D650035D158 /* NetRequest.swift in Sources */,
