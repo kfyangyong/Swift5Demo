@@ -37,7 +37,8 @@ class HomeViewController: UIViewController {
                    "PaixuViewController",
                    "LoginViewController",
                    "MusicViewController",
-                   "RXViewController"]
+                   "RXViewController",
+                   "DriverViewController"]
         
         
         print("********emty********")
@@ -129,6 +130,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         case 10:
             let vc = RXViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 11:
+            let vc = DriverViewController()
             navigationController?.pushViewController(vc, animated: true)
         default:
            

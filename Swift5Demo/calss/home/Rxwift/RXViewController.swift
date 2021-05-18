@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class RXViewController: BaseViewController {
-
+    
     var slider: UISlider!
     let disposeBag = DisposeBag()
     
@@ -22,7 +22,7 @@ class RXViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         slider = UISlider()
         slider.tintColor = .orange
         slider.maximumValue = 100
@@ -38,7 +38,7 @@ class RXViewController: BaseViewController {
             .subscribe {
                 print("当前值为：\($0)")
             }.disposed(by: disposeBag)
-
+        
         
         //双向绑定
         textField = UITextField()
@@ -61,22 +61,36 @@ class RXViewController: BaseViewController {
         }
         
         userVM.username.asObservable().bind(to: textField.rx.text).disposed(by: disposeBag)
-
+        
         textField.rx.text.orEmpty.bind(to: userVM.username).disposed(by: disposeBag)
         userVM.userinfo.bind(to: label.rx.text).disposed(by: disposeBag)
+    }
+    
+    // Observable 产生事件
+    // observer 响应事件
+    //    operator 创建组合事件
+    //    disposable 管理绑定
+    // schedulers 线程队列调配
+    
+    ////MARK: - rxswift 简单基础
+    let icon: UIImageView = UIImageView()
+    
+    func baseRX() {
+        
+        
     }
     
 }
 
 
 struct UserViewModel {
-   //用户名
-   let username = Variable("guest")
+    //用户名
+    let username = Variable("guest")
     
-   //用户信息
-   lazy var userinfo = {
-       return self.username.asObservable()
-           .map{ $0 == "Hanger" ? "您是管理员" : "您是普通访客" }
-           .share(replay: 1)
-   }()
+    //用户信息
+    lazy var userinfo = {
+        return self.username.asObservable()
+            .map{ $0 == "Hanger" ? "您是管理员" : "您是普通访客" }
+            .share(replay: 1)
+    }()
 }
