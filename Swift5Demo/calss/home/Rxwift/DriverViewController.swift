@@ -28,6 +28,8 @@ class DriverViewController: BaseViewController {
         //        subjectsRx()
         
         changeCharRx()
+        testCombine()
+        Connectable()
     }
     
     @objc func barclick() {
@@ -529,7 +531,7 @@ class DriverViewController: BaseViewController {
     //distinctUntilChanged
     func distinctUntilChanged() {
         let disposeBag = DisposeBag()
-         
+        
         Observable.of(2, 30, 22, 22, 5, 60, 60, 3, 40, 5, 30,9)
             .distinctUntilChanged()
             .subscribe(onNext: { print($0) })
@@ -599,33 +601,33 @@ class DriverViewController: BaseViewController {
     //Sample
     //Sample 除了订阅源 Observable 外，还可以监视另外一个 Observable， 即 notifier 。
     //每当收到 notifier 事件，就会从源序列取一个最新的事件并发送。而如果两次 notifier 事件之间没有源序列的事件，则不发送值。
-   
+    
     func sample() {
         let source = PublishSubject<Int>()
         let notifier = PublishSubject<String>()
         source.sample(notifier)
             .subscribe(onNext: { print($0) })
             .disposed(by: disposbag)
-         
+        
         source.onNext(1)
-         
+        
         //让源序列接收接收消息
         notifier.onNext("A")
-         
+        
         source.onNext(2)
-         
+        
         //让源序列接收接收消息
         notifier.onNext("B")
         notifier.onNext("C")
-         
+        
         source.onNext(3)
         source.onNext(4)
-         
+        
         //让源序列接收接收消息
         notifier.onNext("D")
-         
+        
         source.onNext(5)
-         
+        
         //让源序列接收接收消息
         notifier.onCompleted()
     }
@@ -634,7 +636,484 @@ class DriverViewController: BaseViewController {
     //debounce 操作符可以用来过滤掉高频产生的元素，它只会发出这种元素：该元素产生后，一段时间内没有新元素产生。
     //换句话说就是，队列中的元素如果和下一个元素的间隔小于了指定的时间间隔，那么这个元素将被过滤掉。
     //debounce 常用在用户输入的时候，不需要每个字母敲进去都发送一个事件，而是稍等一下取最后一个事件。
+    func debounce() {
+        
+        //定义好每个事件里的值以及发送的时间
+        let times = [
+            [ "value": 1, "time": 0.1 ],
+            [ "value": 2, "time": 1.1 ],
+            [ "value": 3, "time": 1.2 ],
+            [ "value": 4, "time": 1.2 ],
+            [ "value": 5, "time": 1.4 ],
+            [ "value": 6, "time": 2.1 ]
+        ]
+        
+        //生成对应的 Observable 序列并订阅
+        Observable.from(times)
+            .flatMap { item in
+                return Observable.of(Int(item["value"]!))
+                    .delaySubscription(Double(item["time"]!),
+                                       scheduler: MainScheduler.instance)
+            }
+            .debounce(0.5, scheduler: MainScheduler.instance) //只发出与下一个间隔超过0.5秒的元素
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposbag)
+    }
     
+    
+    //MARK: -条件和布尔操作符：amb、takeWhile、skipWhile
+    //https://www.hangge.com/blog/cache/detail_1948.html
+    //amb 当传入多个 Observables 到 amb 操作符时，它将取第一个发出元素或产生事件的 Observable，然后只发出它的元素。并忽略掉其他的 Observables
+    func amb() {
+        let disposeBag = DisposeBag()
+        
+        let subject1 = PublishSubject<Int>()
+        let subject2 = PublishSubject<Int>()
+        let subject3 = PublishSubject<Int>()
+        
+        subject1
+            .amb(subject2)
+            .amb(subject3)
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+        
+        subject2.onNext(1)
+        subject1.onNext(20)
+        subject2.onNext(2)
+        subject1.onNext(40)
+        subject3.onNext(0)
+        subject2.onNext(3)
+        subject1.onNext(60)
+        subject3.onNext(0)
+        subject3.onNext(0)
+    }
+    
+    //takeWhile
+    //该方法依次判断 Observable 序列的每一个值是否满足给定的条件。 当第一个不满足条件的值出现时，它便自动完成。
+    func takeWhile() {
+        let disposeBag = DisposeBag()
+        Observable.of(2, 3, 4, 5, 6)
+            .takeWhile { $0 < 4 }
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+    }
+    //takeUntil
+    //除了订阅源 Observable 外，通过 takeUntil 方法我们还可以监视另外一个 Observable， 即 notifier。
+    //如果 notifier 发出值或 complete 通知，那么源 Observable 便自动完成，停止发送事件。
+    func takeUntil() {
+        let disposeBag = DisposeBag()
+        
+        let source = PublishSubject<String>()
+        let notifier = PublishSubject<String>()
+        
+        source
+            .takeUntil(notifier)
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+        source.onNext("a")
+        source.onNext("b")
+        source.onNext("c")
+        source.onNext("d")
+        
+        //停止接收消息
+        notifier.onNext("z")
+        source.onNext("e")
+        source.onNext("f")
+        source.onNext("g")
+    }
+    //skipWhile
+    //该方法用于跳过前面所有满足条件的事件。
+    //一旦遇到不满足条件的事件，之后就不会再跳过了
+    func skipWhile() {
+        let disposeBag = DisposeBag()
+        Observable.of(2, 3, 4, 5, 6)
+            .skipWhile { $0 < 4 }
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+    }
+    //skipUntil
+    //除了订阅源 Observable 外，通过 skipUntil 方法我们还可以监视另外一个 Observable， 即 notifier 。
+    //Observable 序列事件默认会一直跳过，直到 notifier 发出值或 complete 通知
+    func skipUntil() {
+        let disposeBag = DisposeBag()
+        
+        let source = PublishSubject<Int>()
+        let notifier = PublishSubject<Int>()
+        
+        source
+            .skipUntil(notifier)
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+        
+        source.onNext(1)
+        source.onNext(2)
+        source.onNext(3)
+        source.onNext(4)
+        source.onNext(5)
+        
+        //开始接收消息
+        notifier.onNext(0)
+        
+        source.onNext(6)
+        source.onNext(7)
+        source.onNext(8)
+        
+        //仍然接收消息
+        notifier.onNext(0)
+        source.onNext(9)
+    }
+}
+
+//MARK: - 结合操作符：startWith、merge、zip
+//https://www.hangge.com/blog/cache/detail_1930.html
+extension DriverViewController {
+    
+    func testCombine() {
+        zip()
+    }
+    //startWith
+    //该方法会在 Observable 序列开始之前插入一些事件元素。即发出事件消息之前，会先发出这些预先插入的事件消息。
+    func startWith() {
+        let disposeBag = DisposeBag()
+        Observable.of("2", "3")
+            .startWith("1")
+            .startWith("b")
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+    }
+    
+    //merge
+    //该方法可以将多个（两个或两个以上的）Observable 序列合并成一个 Observable 序列。
+    func merge() {
+        let disposeBag = DisposeBag()
+        let subject1 = PublishSubject<Int>()
+        let subject2 = PublishSubject<Int>()
+        Observable.of(subject1, subject2)
+            .merge()
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+        
+        subject1.onNext(20)
+        subject1.onNext(40)
+        subject1.onNext(60)
+        subject2.onNext(1)
+        subject1.onNext(80)
+        subject1.onNext(100)
+        subject2.onNext(1)
+    }
+    
+    //zip
+    //该方法可以将多个（两个或两个以上的）Observable 序列压缩成一个 Observable 序列。
+    //而且它会等到每个 Observable 事件一一对应地凑齐之后再合并
+    func zip() {
+        let disposeBag = DisposeBag()
+        
+        let subject1 = PublishSubject<Int>()
+        let subject2 = PublishSubject<String>()
+        
+        Observable.zip(subject1, subject2) {
+            "\($0)\($1)"
+        }
+        .subscribe(onNext: {
+            print($0)
+        })
+        .disposed(by: disposeBag)
+        
+        subject1.onNext(1)
+        subject2.onNext("A")
+        subject1.onNext(2)
+        subject2.onNext("B")
+        subject2.onNext("C")
+        subject2.onNext("D")
+        subject1.onNext(3)
+        subject1.onNext(4)
+        subject1.onNext(5)
+        
+        //        1A
+        //        2B
+        //        3C
+        //        4D
+    }
+    //combineLatest
+    //该方法同样是将多个（两个或两个以上的）Observable 序列元素进行合并。
+    //但与 zip 不同的是，每当任意一个 Observable 有新的事件发出时，它会将每个 Observable 序列的最新的一个事件元素进行合并
+    func combineLatest() {
+        let disposeBag = DisposeBag()
+        
+        let subject1 = PublishSubject<Int>()
+        let subject2 = PublishSubject<String>()
+        
+        Observable.combineLatest(subject1, subject2) {
+            "\($0)\($1)"
+        }
+        .subscribe(onNext: { print($0) })
+        .disposed(by: disposeBag)
+        
+        subject1.onNext(1)
+        subject2.onNext("A")
+        subject1.onNext(2)
+        subject2.onNext("B")
+        subject2.onNext("C")
+        subject2.onNext("D")
+        subject1.onNext(3)
+        subject1.onNext(4)
+        subject1.onNext(5)
+    }
+    //withLatestFrom
+    //该方法将两个 Observable 序列合并为一个。每当 self 队列发射一个元素时，便从第二个序列中取出最新的一个值
+    
+    func withLatestFrom() {
+        let disposeBag = DisposeBag()
+        
+        let subject1 = PublishSubject<String>()
+        let subject2 = PublishSubject<String>()
+        
+        subject1.withLatestFrom(subject2)
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+        
+        subject1.onNext("A")
+        subject2.onNext("1")
+        subject1.onNext("B")
+        subject1.onNext("C")
+        subject2.onNext("2")
+        subject1.onNext("D")
+    }
+    
+    //switchLatest
+    //switchLatest 有点像其他语言的 switch 方法，可以对事件流进行转换。
+    //比如本来监听的 subject1，我可以通过更改 variable 里面的 value 更换事件源。变成监听 subject2
+    func switchLatest() {
+        let subject1 =  BehaviorSubject(value: "A")
+        let subject2 =  BehaviorSubject(value: "1")
+        let variable = Variable(subject1)
+        
+        variable.asObservable()
+            .switchLatest()
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposbag)
+        subject1.onNext("B")
+        subject1.onNext("C")
+        
+        //改变事件源
+        variable.value = subject2
+        subject1.onNext("D")
+        subject2.onNext("2")
+        
+        //改变事件源
+        variable.value = subject1
+        subject2.onNext("3")
+        subject1.onNext("E")
+    }
+}
+
+//MARK: - 算数&聚合操作符：toArray、reduce、concat
+extension DriverViewController {
+    func mathematical() {
+        toarray()
+    }
+    
+    func toarray() {
+        let disposeBag = DisposeBag()
+        Observable.of(1, 2, 3)
+            .toArray()
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+    }
+    
+    //reduce 接受一个初始值，和一个操作符号。
+    //reduce 将给定的初始值，与序列里的每个值进行累计运算。得到一个最终结果，并将其作为单个值发送出去。
+    func reduce() {
+        let disposeBag = DisposeBag()
+        Observable.of(1, 2, 3)
+            .reduce(0 , accumulator: +)
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+    }
+    //concat
+    //会把多个 Observable 序列合并（串联）为一个 Observable 序列。
+    //并且只有当前面一个 Observable 序列发出了 completed 事件，才会开始发送下一个 Observable 序列事件
+    func concat() {
+        let disposeBag = DisposeBag()
+        let subject1 = BehaviorSubject(value: 1)
+        let subject2 = BehaviorSubject(value: 2)
+        
+        let variable = Variable(subject1)
+        variable.asObservable()
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposeBag)
+        subject2.onNext(2)
+        subject1.onNext(1)
+        subject1.onNext(1)
+        subject1.onCompleted()
+        
+        variable.value = subject2
+        subject2.onNext(2)
+        
+    }
+    
+}
+
+//MARK: - 连接操作符：connect、publish、replay、multicast
+extension DriverViewController {
+    func Connectable() {
+        //        publish()
+        replay()
+    }
+    
+    //publish 方法会将一个正常的序列转换成一个可连接的序列。同时该序列不会立刻发送事件，只有在调用 connect 之后才会开始
+    func publish() {
+        //每隔1秒钟发送1个事件
+        let interval = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+            .publish()
+        
+        //第一个订阅者（立刻开始订阅）
+        _ = interval
+            .subscribe(onNext: { print("订阅1: \($0)") })
+        
+        //相当于把事件消息推迟了两秒
+        delay(2) {
+            _ = interval.connect()
+        }
+        
+        //第二个订阅者（延迟5秒开始订阅）
+        delay(5) {
+            _ = interval
+                .subscribe(onNext: { print("订阅2: \($0)") })
+        }
+    }
+    
+    //replay
+    //同上面的 publish 方法相同之处在于：会将将一个正常的序列转换成一个可连接的序列。同时该序列不会立刻发送事件，只有在调用 connect 之后才会开始。
+    //replay 与 publish 不同在于：新的订阅者还能接收到订阅之前的事件消息（数量由设置的 bufferSize 决定）
+    func replay() {
+        //每隔1秒钟发送1个事件
+        let interval = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+            .replay(5)
+        
+        //第一个订阅者（立刻开始订阅）
+        _ = interval
+            .subscribe(onNext: { print("订阅1: \($0)") })
+        
+        //相当于把interval 事件消息推迟了两秒
+        delay(2) {
+            _ = interval.connect()
+        }
+        
+        //第二个订阅者（延迟5秒开始订阅）
+        delay(5) {
+            _ = interval
+                .subscribe(onNext: { print("订阅2: \($0)") })
+        }
+    }
+    //refCount
+    
+    //share(relay:)
+    
+    public func delay(_ delay: Double, closure: @escaping () -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            closure()
+        }
+    }
+    
+}
+
+//MARK: - 其他操作符：delay、materialize、timeout
+extension DriverViewController {
+    //1，delay
+    //该操作符会将 Observable 的所有元素都先拖延一段设定好的时间，然后才将它们发送出来。
+    
+    //delaySubscription
+    //使用该操作符可以进行延时订阅。即经过所设定的时间后，才对 Observable 进行订阅操作。
+    
+    //materialize
+    //该操作符可以将序列产生的事件，转换成元素。
+    //通常一个有限的 Observable 将产生零个或者多个 onNext 事件，最后产生一个 onCompleted 或者 onError 事件。而 materialize 操作符会将 Observable 产生的这些事件全部转换成元素，然后发送出来
+    
+    //dematerialize
+    //该操作符的作用和 materialize 正好相反，它可以将 materialize 转换后的元素还原。
+    
+    
+    //timeout
+    //使用该操作符可以设置一个超时时间。如果源 Observable 在规定时间内没有发任何出元素，就产生一个超时的 error 事件。
+    
+    // using
+    //操作符创建 Observable 时，同时会创建一个可被清除的资源，一旦 Observable 终止了，那么这个资源就会被清除掉了
+    func using() {
+        //一个无限序列（每隔0.1秒创建一个序列数 ）
+        let infiniteInterval$ = Observable<Int>
+            .interval(0.1, scheduler: MainScheduler.instance)
+            .do(
+                onNext: { print("infinite$: \($0)") },
+                onSubscribe: { print("开始订阅 infinite$")},
+                onDispose: { print("销毁 infinite$")}
+            )
+        
+        //一个有限序列（每隔0.5秒创建一个序列数，共创建三个 ）
+        let limited$ = Observable<Int>
+            .interval(0.5, scheduler: MainScheduler.instance)
+            .take(2)
+            .do(
+                onNext: { print("limited$: \($0)") },
+                onSubscribe: { print("开始订阅 limited$")},
+                onDispose: { print("销毁 limited$")}
+            )
+        
+        //使用using操作符创建序列
+        let o: Observable<Int> = Observable.using {
+            return AnyDisposable(infiniteInterval$.subscribe())
+        } observableFactory: {_ in
+            return limited$
+        }
+        o.subscribe()
+    }
+}
+
+//MARK: - 错误处理操作
+//通过将 RxSwift.Resources.total 打印出来，我们可以查看当前 RxSwift 申请的所有资源数量。这个在检查内存泄露的时候非常有用
+extension DriverViewController {
+    func testErr() {
+        
+    }
+    
+    func catchErrorJustReturn() {
+        let sequenceThatFails = PublishSubject<String>()
+        sequenceThatFails
+            .catchErrorJustReturn("错误")
+            .subscribe(onNext: { print($0) })
+            .disposed(by: disposbag)
+        
+        sequenceThatFails.onNext("a")
+        sequenceThatFails.onNext("b")
+        sequenceThatFails.onNext("c")
+        sequenceThatFails.onError(MyError.a)
+        sequenceThatFails.onNext("d")
+    }
+    //retry
+    //该方法当遇到错误的时候，会重新订阅该序列。比如遇到网络请求失败时，可以进行重新连接。
+    // retry() 方法可以传入数字表示重试次数。不传的话只会重试一次
+    func retry() {
+        var count = 2
+        let sequenceThatErrors = Observable<String>.create { observer in
+            observer.onNext("a")
+            observer.onNext("b")
+            if count == 1 {
+                observer.onError(Myerror.a)
+                print("erroe pop")
+                count += 1
+            }
+            observer.onNext("c")
+            observer.onNext("d")
+            observer.onCompleted()
+            return Disposables.create()
+        }
+        
+        sequenceThatErrors.retry(2)
+            .debug()
+            .subscribe {
+                print($0)
+            }.disposed(by: disposbag)
+    }
 }
 
 
@@ -660,4 +1139,16 @@ extension Reactive where Base: UILabel {
 enum Myerror: Error {
     case a
     case b
+}
+
+class AnyDisposable: Disposable {
+    let _dispose: () -> Void
+    
+    init(_ disposable: Disposable) {
+        _dispose = disposable.dispose
+    }
+    
+    func dispose() {
+        _dispose()
+    }
 }
