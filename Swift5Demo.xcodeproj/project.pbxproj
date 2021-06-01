@@ -23,6 +23,7 @@
 		DD4267FE25C4145900CB98A1 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FD25C4145900CB98A1 /* ResultModel.swift */; };
 		DD42680025C4182200CB98A1 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FF25C4182200CB98A1 /* TargetType.swift */; };
 		DD5EBBCE261310BA00C09CE0 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5EBBCD261310BA00C09CE0 /* MusicViewController.swift */; };
+		DD61E7B726553066003EA3C9 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61E7B626553066003EA3C9 /* UIViewController+Rx.swift */; };
 		DD6709C125F0B4AD00C9927D /* TabManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6709C025F0B4AD00C9927D /* TabManagerViewController.swift */; };
 		DD67B40625C250B30016C60D /* GCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD67B40525C250B30016C60D /* GCDViewController.swift */; };
 		DD67B40925C294670016C60D /* AsyncAfter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD67B40825C294670016C60D /* AsyncAfter.swift */; };
@@ -32,6 +33,8 @@
 		DD7E08F525F0CC94002281D4 /* TiTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E08F425F0CC94002281D4 /* TiTitleCell.swift */; };
 		DD7E08F725F0CDDF002281D4 /* OptionAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E08F625F0CDDF002281D4 /* OptionAnswerCell.swift */; };
 		DD92E06725C7AC9B00526D08 /* TestAnimations in Resources */ = {isa = PBXBuildFile; fileRef = DD92E06625C7AC9B00526D08 /* TestAnimations */; };
+		DD954DF0265F95B70095D9F7 /* AttributStrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954DEF265F95B70095D9F7 /* AttributStrViewController.swift */; };
+		DD954DF3265FCF950095D9F7 /* RxTableSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954DF2265FCF950095D9F7 /* RxTableSectionsViewController.swift */; };
 		DD96961726520E6300AD7845 /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96961626520E6300AD7845 /* DriverViewController.swift */; };
 		DD969619265238C100AD7845 /* RxTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD969618265238C100AD7845 /* RxTableViewController.swift */; };
 		DD97203725E39D86003E1FB1 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD97203625E39D86003E1FB1 /* PhotosViewController.swift */; };
@@ -112,6 +115,7 @@
 		DD4267FD25C4145900CB98A1 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		DD4267FF25C4182200CB98A1 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		DD5EBBCD261310BA00C09CE0 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		DD61E7B626553066003EA3C9 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		DD6709C025F0B4AD00C9927D /* TabManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManagerViewController.swift; sourceTree = "<group>"; };
 		DD67B40525C250B30016C60D /* GCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewController.swift; sourceTree = "<group>"; };
 		DD67B40825C294670016C60D /* AsyncAfter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAfter.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		DD7E08F425F0CC94002281D4 /* TiTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiTitleCell.swift; sourceTree = "<group>"; };
 		DD7E08F625F0CDDF002281D4 /* OptionAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionAnswerCell.swift; sourceTree = "<group>"; };
 		DD92E06625C7AC9B00526D08 /* TestAnimations */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestAnimations; sourceTree = "<group>"; };
+		DD954DEF265F95B70095D9F7 /* AttributStrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributStrViewController.swift; sourceTree = "<group>"; };
+		DD954DF2265FCF950095D9F7 /* RxTableSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTableSectionsViewController.swift; sourceTree = "<group>"; };
 		DD96961626520E6300AD7845 /* DriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverViewController.swift; sourceTree = "<group>"; };
 		DD969618265238C100AD7845 /* RxTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTableViewController.swift; sourceTree = "<group>"; };
 		DD97203625E39D86003E1FB1 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -321,6 +327,9 @@
 				DD2C9C812615BA660044CAD2 /* RXViewController.swift */,
 				DD96961626520E6300AD7845 /* DriverViewController.swift */,
 				DD969618265238C100AD7845 /* RxTableViewController.swift */,
+				DD954DF2265FCF950095D9F7 /* RxTableSectionsViewController.swift */,
+				DD61E7B626553066003EA3C9 /* UIViewController+Rx.swift */,
+				DD954DEF265F95B70095D9F7 /* AttributStrViewController.swift */,
 			);
 			path = Rxwift;
 			sourceTree = "<group>";
@@ -728,6 +737,7 @@
 				DDD1E9ED25F8BE4500E49CF6 /* SortView.swift in Sources */,
 				DD7E08F525F0CC94002281D4 /* TiTitleCell.swift in Sources */,
 				DD5EBBCE261310BA00C09CE0 /* MusicViewController.swift in Sources */,
+				DD954DF0265F95B70095D9F7 /* AttributStrViewController.swift in Sources */,
 				DD10C087233B6FE50035D158 /* StrInt.swift in Sources */,
 				DD96961726520E6300AD7845 /* DriverViewController.swift in Sources */,
 				DD67B40925C294670016C60D /* AsyncAfter.swift in Sources */,
@@ -739,6 +749,7 @@
 				DDC60AB0233A12B300BEC45C /* YYNavViewController.swift in Sources */,
 				DD97203C25E3AF39003E1FB1 /* CircleViewModel.swift in Sources */,
 				DDC60AAA233A125900BEC45C /* WebViewController.swift in Sources */,
+				DD954DF3265FCF950095D9F7 /* RxTableSectionsViewController.swift in Sources */,
 				DDFED38325C2AE210056FF9C /* SuspendAndResum.swift in Sources */,
 				DDE68DCD25F9FFB200F39601 /* Shaders.metal in Sources */,
 				DDFED38525C2C0D10056FF9C /* DispatchSourceTest.swift in Sources */,
@@ -766,6 +777,7 @@
 				DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */,
 				DDD1E9E625F8A0FC00E49CF6 /* PaixuViewController.swift in Sources */,
 				DDE68DCF25F9FFE800F39601 /* MetalView03.swift in Sources */,
+				DD61E7B726553066003EA3C9 /* UIViewController+Rx.swift in Sources */,
 				DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */,
 				DD7E08F725F0CDDF002281D4 /* OptionAnswerCell.swift in Sources */,
 				DD9D921625E205F20024F933 /* PathViewController.swift in Sources */,

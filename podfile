@@ -6,6 +6,7 @@ target 'Swift5Demo' do
 
    pod 'Moya/RxSwift'
    pod 'RxCocoa'
+   pod 'RxDataSources'
 
    pod 'MJRefresh', '~> 3.1.12'
    pod 'MBProgressHUD'

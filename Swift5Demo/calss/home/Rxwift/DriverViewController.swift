@@ -10,6 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+// Driver 使用一个 UI 元素值（绑定）来驱动另一个 UI 元素值
+//不会产生 error 事件
+//一定在主线程监听（MainScheduler）
+//共享状态变化（shareReplayLatestWhileConnected）
 class DriverViewController: BaseViewController {
     
     let disposbag = DisposeBag()
@@ -1126,7 +1130,6 @@ extension UILabel {
     }
 }
 // 通过对 Reactive 类进行扩展
-
 extension Reactive where Base: UILabel {
     
     public var fontsize: Binder<CGFloat> {
@@ -1135,6 +1138,25 @@ extension Reactive where Base: UILabel {
         }
     }
 }
+
+/*
+ ControlEvent
+ 是专门用于描述 UI 所产生的事件，拥有该类型的属性都是被观察者（Observable）。
+ ControlEvent 和 ControlProperty 一样，都具有以下特征：
+ 不会产生 error 事件
+ 一定在 MainScheduler 订阅（主线程订阅）
+ 一定在 MainScheduler 监听（主线程监听）
+ 共享状态变化
+ 
+ extension Reactive where Base: UIButton {
+     public var tap: ControlEvent<Void> {
+         return controlEvent(.touchUpInside)
+     }
+ }
+ 
+ */
+ 
+
 
 enum Myerror: Error {
     case a
