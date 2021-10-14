@@ -27,3 +27,36 @@ class BaseViewController: UIViewController {
     }
 
 }
+
+extension BaseViewController {
+    func showErrorAlter(_ title: String?, message: String) {
+        let alter = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "ok", style: .default) { result in
+            print("showErrorAlter \(message)")
+        }
+        alter.addAction(action)
+        self.present(alter, animated: true)
+    }
+    
+    func showSuccessAlter(_ title: String?, message: String) {
+        let alter = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "ok", style: .default) { result in
+            print("showErrorAlter \(message)")
+        }
+        alter.addAction(action)
+        self.present(alter, animated: true)
+    }
+    
+    func dataStartLoding() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func dataFinishedLoading() {
+        MBProgressHUD.hide(for: self.view, animated: true)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
+}

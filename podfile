@@ -11,7 +11,7 @@ target 'Swift5Demo' do
    pod 'MJRefresh', '~> 3.1.12'
    pod 'MBProgressHUD'
    pod 'SnapKit'
-   
+
    #
    pod 'PIPKit'
 
@@ -22,13 +22,14 @@ target 'Swift5Demo' do
    pod 'lottie-ios'
 
    #颜色
-   pod 'ChameleonFramework/Swift'
+#   pod 'ChameleonFramework/Swift' , '~> 2.2.0'
+   pod 'ChameleonFramework'
 
    #table 根据数据加载ui
    pod 'ZJTableViewManager'
    
    pod 'SwiftyStarRatingView'
-   pod 'ImagePicker'
+#   pod 'ImagePicker'
    pod 'SKPhotoBrowser', '~> 5.0.0'
    
    #多页面

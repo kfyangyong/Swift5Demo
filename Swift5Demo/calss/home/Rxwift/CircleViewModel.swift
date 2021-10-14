@@ -14,9 +14,10 @@
 //  the ball could have change based on the center.
 //
 
-import ChameleonFramework
 import Foundation
 import RxSwift
+
+import ChameleonFramework
 
 class CircleViewModel {
     

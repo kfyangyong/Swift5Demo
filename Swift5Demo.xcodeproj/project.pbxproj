@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		954B8FF96652F85F791444E7 /* libPods-Swift5Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CA69610BF5329170B3D65D /* libPods-Swift5Demo.a */; };
+		DD0481D12717C9900094A929 /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0481D02717C9900094A929 /* CustomPickerView.swift */; };
+		DD0481D52717DBD00094A929 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0481D42717DBD00094A929 /* MovieListViewController.swift */; };
 		DD10C07D233B68320035D158 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C07C233B68320035D158 /* LoginViewController.swift */; };
 		DD10C081233B6C030035D158 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C080233B6C030035D158 /* MoyaConfig.swift */; };
 		DD10C087233B6FE50035D158 /* StrInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C086233B6FE50035D158 /* StrInt.swift */; };
@@ -99,6 +101,8 @@
 		25CA69610BF5329170B3D65D /* libPods-Swift5Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Swift5Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB37D226D5ECD7952DB46C1 /* Pods-Swift5Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Demo.release.xcconfig"; path = "Target Support Files/Pods-Swift5Demo/Pods-Swift5Demo.release.xcconfig"; sourceTree = "<group>"; };
 		8A1CC92AE09466073B4CC460 /* Pods-Swift5Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Demo.debug.xcconfig"; path = "Target Support Files/Pods-Swift5Demo/Pods-Swift5Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		DD0481D02717C9900094A929 /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
+		DD0481D42717DBD00094A929 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		DD10C07C233B68320035D158 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DD10C080233B6C030035D158 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
 		DD10C086233B6FE50035D158 /* StrInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrInt.swift; sourceTree = "<group>"; };
@@ -217,6 +221,21 @@
 				4EB37D226D5ECD7952DB46C1 /* Pods-Swift5Demo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD0481CE2717C95C0094A929 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DD0481D02717C9900094A929 /* CustomPickerView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DD0481CF2717C9640094A929 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		DD10C07B233B68150035D158 /* login */ = {
@@ -456,7 +475,9 @@
 		DDC60AA3233A11F000BEC45C /* message */ = {
 			isa = PBXGroup;
 			children = (
+				DDD097C22716EF5300228E55 /* Mvvm */,
 				DDC60A9A2339FBBB00BEC45C /* MessageViewController.swift */,
+				DD0481D42717DBD00094A929 /* MovieListViewController.swift */,
 			);
 			path = message;
 			sourceTree = "<group>";
@@ -504,6 +525,15 @@
 				DD2464C925BFF6DE00C58D82 /* Swift5Demo-Bridging-Header.h */,
 			);
 			path = base;
+			sourceTree = "<group>";
+		};
+		DDD097C22716EF5300228E55 /* Mvvm */ = {
+			isa = PBXGroup;
+			children = (
+				DD0481CF2717C9640094A929 /* model */,
+				DD0481CE2717C95C0094A929 /* view */,
+			);
+			path = Mvvm;
 			sourceTree = "<group>";
 		};
 		DDD1E9E425F8A0DA00E49CF6 /* paixu */ = {
@@ -733,6 +763,7 @@
 				DD12805B25C5028D00751B98 /* UserApi.swift in Sources */,
 				DD6709C125F0B4AD00C9927D /* TabManagerViewController.swift in Sources */,
 				DDC60A6B2339ED6E00BEC45C /* AppDelegate.swift in Sources */,
+				DD0481D12717C9900094A929 /* CustomPickerView.swift in Sources */,
 				DD4267FC25C4131000CB98A1 /* Api.swift in Sources */,
 				DDD1E9ED25F8BE4500E49CF6 /* SortView.swift in Sources */,
 				DD7E08F525F0CC94002281D4 /* TiTitleCell.swift in Sources */,
@@ -779,6 +810,7 @@
 				DDE68DCF25F9FFE800F39601 /* MetalView03.swift in Sources */,
 				DD61E7B726553066003EA3C9 /* UIViewController+Rx.swift in Sources */,
 				DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */,
+				DD0481D52717DBD00094A929 /* MovieListViewController.swift in Sources */,
 				DD7E08F725F0CDDF002281D4 /* OptionAnswerCell.swift in Sources */,
 				DD9D921625E205F20024F933 /* PathViewController.swift in Sources */,
 			);
@@ -956,7 +988,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63NH72CDZ9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Swift5Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -979,7 +1011,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63NH72CDZ9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Swift5Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
