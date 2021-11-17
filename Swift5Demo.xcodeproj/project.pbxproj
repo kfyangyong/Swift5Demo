@@ -10,6 +10,9 @@
 		954B8FF96652F85F791444E7 /* libPods-Swift5Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CA69610BF5329170B3D65D /* libPods-Swift5Demo.a */; };
 		DD0481D12717C9900094A929 /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0481D02717C9900094A929 /* CustomPickerView.swift */; };
 		DD0481D52717DBD00094A929 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0481D42717DBD00094A929 /* MovieListViewController.swift */; };
+		DD0481D82717DFD60094A929 /* MovieDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0481D72717DFD60094A929 /* MovieDataViewModel.swift */; };
+		DD0481DA2717E0590094A929 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0481D92717E0590094A929 /* MovieData.swift */; };
+		DD0481DC2717E06B0094A929 /* DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0481DB2717E06B0094A929 /* DynamicType.swift */; };
 		DD10C07D233B68320035D158 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C07C233B68320035D158 /* LoginViewController.swift */; };
 		DD10C081233B6C030035D158 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C080233B6C030035D158 /* MoyaConfig.swift */; };
 		DD10C087233B6FE50035D158 /* StrInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10C086233B6FE50035D158 /* StrInt.swift */; };
@@ -34,6 +37,7 @@
 		DD7E08F325F0C600002281D4 /* TiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E08F225F0C600002281D4 /* TiModel.swift */; };
 		DD7E08F525F0CC94002281D4 /* TiTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E08F425F0CC94002281D4 /* TiTitleCell.swift */; };
 		DD7E08F725F0CDDF002281D4 /* OptionAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E08F625F0CDDF002281D4 /* OptionAnswerCell.swift */; };
+		DD8DF5532718651200B82EBB /* GcdTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8DF5522718651200B82EBB /* GcdTimer.swift */; };
 		DD92E06725C7AC9B00526D08 /* TestAnimations in Resources */ = {isa = PBXBuildFile; fileRef = DD92E06625C7AC9B00526D08 /* TestAnimations */; };
 		DD954DF0265F95B70095D9F7 /* AttributStrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954DEF265F95B70095D9F7 /* AttributStrViewController.swift */; };
 		DD954DF3265FCF950095D9F7 /* RxTableSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954DF2265FCF950095D9F7 /* RxTableSectionsViewController.swift */; };
@@ -103,6 +107,9 @@
 		8A1CC92AE09466073B4CC460 /* Pods-Swift5Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Demo.debug.xcconfig"; path = "Target Support Files/Pods-Swift5Demo/Pods-Swift5Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		DD0481D02717C9900094A929 /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
 		DD0481D42717DBD00094A929 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		DD0481D72717DFD60094A929 /* MovieDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataViewModel.swift; sourceTree = "<group>"; };
+		DD0481D92717E0590094A929 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
+		DD0481DB2717E06B0094A929 /* DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicType.swift; sourceTree = "<group>"; };
 		DD10C07C233B68320035D158 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DD10C080233B6C030035D158 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
 		DD10C086233B6FE50035D158 /* StrInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrInt.swift; sourceTree = "<group>"; };
@@ -128,6 +135,7 @@
 		DD7E08F225F0C600002281D4 /* TiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiModel.swift; sourceTree = "<group>"; };
 		DD7E08F425F0CC94002281D4 /* TiTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiTitleCell.swift; sourceTree = "<group>"; };
 		DD7E08F625F0CDDF002281D4 /* OptionAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionAnswerCell.swift; sourceTree = "<group>"; };
+		DD8DF5522718651200B82EBB /* GcdTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GcdTimer.swift; sourceTree = "<group>"; };
 		DD92E06625C7AC9B00526D08 /* TestAnimations */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestAnimations; sourceTree = "<group>"; };
 		DD954DEF265F95B70095D9F7 /* AttributStrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributStrViewController.swift; sourceTree = "<group>"; };
 		DD954DF2265FCF950095D9F7 /* RxTableSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxTableSectionsViewController.swift; sourceTree = "<group>"; };
@@ -234,8 +242,18 @@
 		DD0481CF2717C9640094A929 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				DD0481D92717E0590094A929 /* MovieData.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		DD0481D62717DF9B0094A929 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD0481D72717DFD60094A929 /* MovieDataViewModel.swift */,
+				DD0481DB2717E06B0094A929 /* DynamicType.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DD10C07B233B68150035D158 /* login */ = {
@@ -504,6 +522,7 @@
 			children = (
 				DD10C086233B6FE50035D158 /* StrInt.swift */,
 				DDD1E9E725F8B2BF00E49CF6 /* Array.swift */,
+				DD8DF5522718651200B82EBB /* GcdTimer.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -530,6 +549,7 @@
 		DDD097C22716EF5300228E55 /* Mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				DD0481D62717DF9B0094A929 /* ViewModel */,
 				DD0481CF2717C9640094A929 /* model */,
 				DD0481CE2717C95C0094A929 /* view */,
 			);
@@ -754,6 +774,7 @@
 				DD202F3E25F1FD41008BE9A6 /* AnalysisCell.swift in Sources */,
 				DD9A026825BFEFD300E68A57 /* YYPlayViewController.swift in Sources */,
 				DD26A63225B92F480041AF8F /* PayManager.swift in Sources */,
+				DD8DF5532718651200B82EBB /* GcdTimer.swift in Sources */,
 				DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */,
 				DDA149A725B2C6A30040E1CD /* ActiveLabelViewController.swift in Sources */,
 				DDD1E9E825F8B2BF00E49CF6 /* Array.swift in Sources */,
@@ -795,6 +816,7 @@
 				DDC60AAE233A129700BEC45C /* YYTabbarViewController.swift in Sources */,
 				DD10C081233B6C030035D158 /* MoyaConfig.swift in Sources */,
 				DD42680025C4182200CB98A1 /* TargetType.swift in Sources */,
+				DD0481DC2717E06B0094A929 /* DynamicType.swift in Sources */,
 				DDC60A9D2339FBCC00BEC45C /* MyViewController.swift in Sources */,
 				DD10C090233BA21B0035D158 /* UserInfoModel.swift in Sources */,
 				DD2C9C822615BA660044CAD2 /* RXViewController.swift in Sources */,
@@ -807,6 +829,8 @@
 				DD10C089233B7D650035D158 /* NetRequest.swift in Sources */,
 				DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */,
 				DDD1E9E625F8A0FC00E49CF6 /* PaixuViewController.swift in Sources */,
+				DD0481D82717DFD60094A929 /* MovieDataViewModel.swift in Sources */,
+				DD0481DA2717E0590094A929 /* MovieData.swift in Sources */,
 				DDE68DCF25F9FFE800F39601 /* MetalView03.swift in Sources */,
 				DD61E7B726553066003EA3C9 /* UIViewController+Rx.swift in Sources */,
 				DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 //测试任务是否在指定队列中，通过给队列设置一个标识， 使用dis 获取标识，能获取到说明在该队列中
 enum DispatchTaskType: String {
@@ -31,6 +32,10 @@ class GCDViewController: BaseViewController {
     
     var signal: DispatchSourceSignal!
     
+    //初始化读写锁
+    private var lock = pthread_rwlock_t()
+    private let rwQueue = DispatchQueue(label: "rwQueue", attributes: .concurrent)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initQuete()
@@ -43,8 +48,57 @@ class GCDViewController: BaseViewController {
         //        testGroup()
         //        groupNoti()
         dispatchForSignal()
+        
+        let status = pthread_rwlock_init(&lock, nil)
+        assert(status == 0)
+        
+        
     }
     
+    // MARK: -读写锁
+    deinit {
+        pthread_rwlock_destroy(&lock)
+    }
+    
+    func read() {
+        pthread_rwlock_rdlock(&lock)
+        print("read")
+        pthread_rwlock_unlock(&lock)
+    }
+    
+    func write() {
+        pthread_rwlock_wrlock(&lock)
+        print("write")
+        pthread_rwlock_unlock(&lock)
+    }
+    
+    // MARK: -
+    func readWrite() {
+        rwQueue.async {
+            print("read")
+        }
+        rwQueue.async {
+            print("read")
+        }
+
+        let task1 = DispatchWorkItem(flags: DispatchWorkItemFlags.barrier) {
+            print("write1")
+        }
+        rwQueue.async(execute: task1)
+        rwQueue.async {
+            print("read 1")
+        }
+        let task2 = DispatchWorkItem(flags: DispatchWorkItemFlags.barrier) {
+            print("write2")
+        }
+        rwQueue.async(execute: task2)
+        rwQueue.async {
+            print("read 2")
+        }
+    }
+
+    
+    // MARK: -gcd
     func dispatchForSignal(){
         printTime(withComment: "4")
         signal = DispatchSource.makeSignalSource(signal: Int32(SIGSTOP))
