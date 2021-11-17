@@ -24,6 +24,16 @@
 		DD202F3E25F1FD41008BE9A6 /* AnalysisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD202F3D25F1FD41008BE9A6 /* AnalysisCell.swift */; };
 		DD26A63225B92F480041AF8F /* PayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26A63125B92F480041AF8F /* PayManager.swift */; };
 		DD2C9C822615BA660044CAD2 /* RXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2C9C812615BA660044CAD2 /* RXViewController.swift */; };
+		DD33CBBF266A07520086D5B4 /* LFVideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DD33CBBE266A07520086D5B4 /* LFVideoEncoder.m */; };
+		DD33CBC2266A07D30086D5B4 /* LFMP4Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = DD33CBC1266A07D30086D5B4 /* LFMP4Atom.m */; };
+		DD33CBCB266A101E0086D5B4 /* LFNALUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD33CBC9266A101E0086D5B4 /* LFNALUnit.cpp */; };
+		DD33CBDA266A20920086D5B4 /* LFH264VideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DD33CBD9266A20920086D5B4 /* LFH264VideoEncoder.m */; };
+		DD33CBDD266A20A20086D5B4 /* LFHardwareAudioEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DD33CBDC266A20A20086D5B4 /* LFHardwareAudioEncoder.m */; };
+		DD33CBE0266A20B10086D5B4 /* LFHardwareVideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DD33CBDF266A20B10086D5B4 /* LFHardwareVideoEncoder.m */; };
+		DD33CBE4266A20E10086D5B4 /* LFLiveAudioConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = DD33CBE3266A20E10086D5B4 /* LFLiveAudioConfiguration.m */; };
+		DD33CBE7266A20F00086D5B4 /* LFLiveVideoConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = DD33CBE6266A20F00086D5B4 /* LFLiveVideoConfiguration.m */; };
+		DD33CBEB266A21280086D5B4 /* LFGPUImageBeautyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = DD33CBEA266A21280086D5B4 /* LFGPUImageBeautyFilter.m */; };
+		DD33CBEE266A213A0086D5B4 /* LFGPUImageEmptyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = DD33CBED266A213A0086D5B4 /* LFGPUImageEmptyFilter.m */; };
 		DD4267FC25C4131000CB98A1 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FB25C4131000CB98A1 /* Api.swift */; };
 		DD4267FE25C4145900CB98A1 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FD25C4145900CB98A1 /* ResultModel.swift */; };
 		DD42680025C4182200CB98A1 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FF25C4182200CB98A1 /* TargetType.swift */; };
@@ -122,6 +132,28 @@
 		DD2464C925BFF6DE00C58D82 /* Swift5Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift5Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD26A63125B92F480041AF8F /* PayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayManager.swift; sourceTree = "<group>"; };
 		DD2C9C812615BA660044CAD2 /* RXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXViewController.swift; sourceTree = "<group>"; };
+		DD33CBBD266A07520086D5B4 /* LFVideoEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFVideoEncoder.h; sourceTree = "<group>"; };
+		DD33CBBE266A07520086D5B4 /* LFVideoEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFVideoEncoder.m; sourceTree = "<group>"; };
+		DD33CBC0266A07D30086D5B4 /* LFMP4Atom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFMP4Atom.h; sourceTree = "<group>"; };
+		DD33CBC1266A07D30086D5B4 /* LFMP4Atom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFMP4Atom.m; sourceTree = "<group>"; };
+		DD33CBC9266A101E0086D5B4 /* LFNALUnit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LFNALUnit.cpp; sourceTree = "<group>"; };
+		DD33CBCA266A101E0086D5B4 /* LFNALUnit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LFNALUnit.hpp; sourceTree = "<group>"; };
+		DD33CBD5266A207F0086D5B4 /* LFAudioEncoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFAudioEncoding.h; sourceTree = "<group>"; };
+		DD33CBD8266A20920086D5B4 /* LFH264VideoEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFH264VideoEncoder.h; sourceTree = "<group>"; };
+		DD33CBD9266A20920086D5B4 /* LFH264VideoEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFH264VideoEncoder.m; sourceTree = "<group>"; };
+		DD33CBDB266A20A20086D5B4 /* LFHardwareAudioEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFHardwareAudioEncoder.h; sourceTree = "<group>"; };
+		DD33CBDC266A20A20086D5B4 /* LFHardwareAudioEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFHardwareAudioEncoder.m; sourceTree = "<group>"; };
+		DD33CBDE266A20B10086D5B4 /* LFHardwareVideoEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFHardwareVideoEncoder.h; sourceTree = "<group>"; };
+		DD33CBDF266A20B10086D5B4 /* LFHardwareVideoEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFHardwareVideoEncoder.m; sourceTree = "<group>"; };
+		DD33CBE2266A20E10086D5B4 /* LFLiveAudioConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFLiveAudioConfiguration.h; sourceTree = "<group>"; };
+		DD33CBE3266A20E10086D5B4 /* LFLiveAudioConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFLiveAudioConfiguration.m; sourceTree = "<group>"; };
+		DD33CBE5266A20F00086D5B4 /* LFLiveVideoConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFLiveVideoConfiguration.h; sourceTree = "<group>"; };
+		DD33CBE6266A20F00086D5B4 /* LFLiveVideoConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFLiveVideoConfiguration.m; sourceTree = "<group>"; };
+		DD33CBE9266A21280086D5B4 /* LFGPUImageBeautyFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFGPUImageBeautyFilter.h; sourceTree = "<group>"; };
+		DD33CBEA266A21280086D5B4 /* LFGPUImageBeautyFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFGPUImageBeautyFilter.m; sourceTree = "<group>"; };
+		DD33CBEC266A213A0086D5B4 /* LFGPUImageEmptyFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFGPUImageEmptyFilter.h; sourceTree = "<group>"; };
+		DD33CBED266A213A0086D5B4 /* LFGPUImageEmptyFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFGPUImageEmptyFilter.m; sourceTree = "<group>"; };
+		DD33CBEF266A21AE0086D5B4 /* LFVideoEncoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFVideoEncoding.h; sourceTree = "<group>"; };
 		DD4267FB25C4131000CB98A1 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		DD4267FD25C4145900CB98A1 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		DD4267FF25C4182200CB98A1 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
@@ -300,6 +332,62 @@
 			path = Pay;
 			sourceTree = "<group>";
 		};
+		DD33CBD2266A20410086D5B4 /* live */ = {
+			isa = PBXGroup;
+			children = (
+				DD33CBE8266A210A0086D5B4 /* filter */,
+				DD33CBE1266A20CA0086D5B4 /* configuration */,
+				DD33CBD4266A205C0086D5B4 /* capture */,
+				DD33CBD3266A204D0086D5B4 /* coder */,
+			);
+			path = live;
+			sourceTree = "<group>";
+		};
+		DD33CBD3266A204D0086D5B4 /* coder */ = {
+			isa = PBXGroup;
+			children = (
+				DD6ED4422666125D001FDAA8 /* h264 */,
+				DD33CBD5266A207F0086D5B4 /* LFAudioEncoding.h */,
+				DD33CBEF266A21AE0086D5B4 /* LFVideoEncoding.h */,
+				DD33CBD8266A20920086D5B4 /* LFH264VideoEncoder.h */,
+				DD33CBD9266A20920086D5B4 /* LFH264VideoEncoder.m */,
+				DD33CBDB266A20A20086D5B4 /* LFHardwareAudioEncoder.h */,
+				DD33CBDC266A20A20086D5B4 /* LFHardwareAudioEncoder.m */,
+				DD33CBDE266A20B10086D5B4 /* LFHardwareVideoEncoder.h */,
+				DD33CBDF266A20B10086D5B4 /* LFHardwareVideoEncoder.m */,
+			);
+			path = coder;
+			sourceTree = "<group>";
+		};
+		DD33CBD4266A205C0086D5B4 /* capture */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = capture;
+			sourceTree = "<group>";
+		};
+		DD33CBE1266A20CA0086D5B4 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				DD33CBE2266A20E10086D5B4 /* LFLiveAudioConfiguration.h */,
+				DD33CBE3266A20E10086D5B4 /* LFLiveAudioConfiguration.m */,
+				DD33CBE5266A20F00086D5B4 /* LFLiveVideoConfiguration.h */,
+				DD33CBE6266A20F00086D5B4 /* LFLiveVideoConfiguration.m */,
+			);
+			path = configuration;
+			sourceTree = "<group>";
+		};
+		DD33CBE8266A210A0086D5B4 /* filter */ = {
+			isa = PBXGroup;
+			children = (
+				DD33CBE9266A21280086D5B4 /* LFGPUImageBeautyFilter.h */,
+				DD33CBEA266A21280086D5B4 /* LFGPUImageBeautyFilter.m */,
+				DD33CBEC266A213A0086D5B4 /* LFGPUImageEmptyFilter.h */,
+				DD33CBED266A213A0086D5B4 /* LFGPUImageEmptyFilter.m */,
+			);
+			path = filter;
+			sourceTree = "<group>";
+		};
 		DD6709B825F0AE7300C9927D /* TabManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +432,19 @@
 				DDFED38625C398300056FF9C /* DispatchIOManager.swift */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		DD6ED4422666125D001FDAA8 /* h264 */ = {
+			isa = PBXGroup;
+			children = (
+				DD33CBBD266A07520086D5B4 /* LFVideoEncoder.h */,
+				DD33CBBE266A07520086D5B4 /* LFVideoEncoder.m */,
+				DD33CBC0266A07D30086D5B4 /* LFMP4Atom.h */,
+				DD33CBC1266A07D30086D5B4 /* LFMP4Atom.m */,
+				DD33CBC9266A101E0086D5B4 /* LFNALUnit.cpp */,
+				DD33CBCA266A101E0086D5B4 /* LFNALUnit.hpp */,
+			);
+			path = h264;
 			sourceTree = "<group>";
 		};
 		DD92DF0825C7A65E00526D08 /* lottie */ = {
@@ -448,6 +549,7 @@
 		DDC60AA0233A11D000BEC45C /* calss */ = {
 			isa = PBXGroup;
 			children = (
+				DD33CBD2266A20410086D5B4 /* live */,
 				DD10C07B233B68150035D158 /* login */,
 				DDC60AA8233A122D00BEC45C /* base */,
 				DDC60AA7233A122100BEC45C /* share */,
@@ -777,17 +879,21 @@
 				DD8DF5532718651200B82EBB /* GcdTimer.swift in Sources */,
 				DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */,
 				DDA149A725B2C6A30040E1CD /* ActiveLabelViewController.swift in Sources */,
+				DD33CBC2266A07D30086D5B4 /* LFMP4Atom.m in Sources */,
 				DDD1E9E825F8B2BF00E49CF6 /* Array.swift in Sources */,
 				DDB48A992604A5EF0071E301 /* CSSystemCapture.swift in Sources */,
 				DDC60AAC233A126800BEC45C /* ShareViewController.swift in Sources */,
 				DDE22C41260880DC001038B8 /* CSAudioEncoder.swift in Sources */,
+				DD33CBEB266A21280086D5B4 /* LFGPUImageBeautyFilter.m in Sources */,
 				DD12805B25C5028D00751B98 /* UserApi.swift in Sources */,
 				DD6709C125F0B4AD00C9927D /* TabManagerViewController.swift in Sources */,
 				DDC60A6B2339ED6E00BEC45C /* AppDelegate.swift in Sources */,
 				DD0481D12717C9900094A929 /* CustomPickerView.swift in Sources */,
 				DD4267FC25C4131000CB98A1 /* Api.swift in Sources */,
 				DDD1E9ED25F8BE4500E49CF6 /* SortView.swift in Sources */,
+				DD33CBE7266A20F00086D5B4 /* LFLiveVideoConfiguration.m in Sources */,
 				DD7E08F525F0CC94002281D4 /* TiTitleCell.swift in Sources */,
+				DD33CBCB266A101E0086D5B4 /* LFNALUnit.cpp in Sources */,
 				DD5EBBCE261310BA00C09CE0 /* MusicViewController.swift in Sources */,
 				DD954DF0265F95B70095D9F7 /* AttributStrViewController.swift in Sources */,
 				DD10C087233B6FE50035D158 /* StrInt.swift in Sources */,
@@ -800,6 +906,7 @@
 				DD4267FE25C4145900CB98A1 /* ResultModel.swift in Sources */,
 				DDC60AB0233A12B300BEC45C /* YYNavViewController.swift in Sources */,
 				DD97203C25E3AF39003E1FB1 /* CircleViewModel.swift in Sources */,
+				DD33CBE0266A20B10086D5B4 /* LFHardwareVideoEncoder.m in Sources */,
 				DDC60AAA233A125900BEC45C /* WebViewController.swift in Sources */,
 				DD954DF3265FCF950095D9F7 /* RxTableSectionsViewController.swift in Sources */,
 				DDFED38325C2AE210056FF9C /* SuspendAndResum.swift in Sources */,
@@ -815,16 +922,21 @@
 				DD7E08F125F0BEBA002281D4 /* TiImageCell.swift in Sources */,
 				DDC60AAE233A129700BEC45C /* YYTabbarViewController.swift in Sources */,
 				DD10C081233B6C030035D158 /* MoyaConfig.swift in Sources */,
+				DD33CBDA266A20920086D5B4 /* LFH264VideoEncoder.m in Sources */,
 				DD42680025C4182200CB98A1 /* TargetType.swift in Sources */,
 				DD0481DC2717E06B0094A929 /* DynamicType.swift in Sources */,
 				DDC60A9D2339FBCC00BEC45C /* MyViewController.swift in Sources */,
 				DD10C090233BA21B0035D158 /* UserInfoModel.swift in Sources */,
 				DD2C9C822615BA660044CAD2 /* RXViewController.swift in Sources */,
 				DD10C08E233B9EF60035D158 /* SaveFiles.swift in Sources */,
+				DD33CBDD266A20A20086D5B4 /* LFHardwareAudioEncoder.m in Sources */,
+				DD33CBE4266A20E10086D5B4 /* LFLiveAudioConfiguration.m in Sources */,
 				DD7E08F325F0C600002281D4 /* TiModel.swift in Sources */,
 				DDC60A9F2339FBEB00BEC45C /* HomeViewController.swift in Sources */,
+				DD33CBBF266A07520086D5B4 /* LFVideoEncoder.m in Sources */,
 				DDE22C43260891A7001038B8 /* CSAudioConfig.swift in Sources */,
 				DD7E08EF25F0BBF1002281D4 /* TiLableCell.swift in Sources */,
+				DD33CBEE266A213A0086D5B4 /* LFGPUImageEmptyFilter.m in Sources */,
 				DD10C07D233B68320035D158 /* LoginViewController.swift in Sources */,
 				DD10C089233B7D650035D158 /* NetRequest.swift in Sources */,
 				DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */,
