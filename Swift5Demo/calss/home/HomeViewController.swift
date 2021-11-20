@@ -38,7 +38,8 @@ class HomeViewController: UIViewController {
                    "LoginViewController",
                    "MusicViewController",
                    "RXViewController",
-                   "DriverViewController"]
+                   "DriverViewController",
+                   "TestViewController"]
         
         
         print("********emty********")
@@ -135,7 +136,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             let vc = DriverViewController()
             navigationController?.pushViewController(vc, animated: true)
         default:
-           
+            let vc = TestViewController()
+            navigationController?.pushViewController(vc, animated: true)
             break
         }
     }
