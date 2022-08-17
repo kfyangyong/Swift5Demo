@@ -12,6 +12,10 @@ target 'Swift5Demo' do
    pod 'MBProgressHUD'
    pod 'SnapKit'
 
+   pod 'Kingfisher'
+   
+   pod "JLRoutes"
+   
    #
    pod 'PIPKit'
 

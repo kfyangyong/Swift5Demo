@@ -10,6 +10,10 @@ import UIKit
 import RxSwift
 class LoginViewController: BaseViewController {
     let disposBag = DisposeBag()
+//    let minimalUsernameLength = 5
+//    let minimalPasswordLength = 5
+
+    private var viewModel: LoginViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,25 +22,35 @@ class LoginViewController: BaseViewController {
     }
     
     func setRX() {
-        let nameValid = nameTF.rx.text.orEmpty.map {
-            $0.count > 5
-        }.share(replay: 1)
+//        let nameValid = nameTF.rx.text.orEmpty.map {
+//            $0.count > self.minimalUsernameLength
+//        }.share(replay: 1)
+//
+//        let pwdValid = pwdTF.rx.text.orEmpty.map {
+//            $0.count > self.minimalPasswordLength
+//        }.share(replay: 1)
+//
+//        let everythingValid = Observable.combineLatest(
+//            nameValid,
+//            pwdValid
+//        ) { $0 && $1 }
+//        .share(replay: 1)
         
-        let pwdValid = pwdTF.rx.text.orEmpty.map {
-            $0.count > 5
-        }.share(replay: 1)
         
-        let everythingValid = Observable.combineLatest(
-            nameValid,
-            pwdValid
-        ) { $0 && $1 }
-        .share(replay: 1)
+//        nameValid.bind(to: pwdTF.rx.isEnabled).disposed(by: disposBag)
+//        everythingValid.bind(to: login.rx.isEnabled).disposed(by: disposBag)
+//        login.rx.tap.subscribe(onDisposed:  {
+//            print("开始登录")
+//        }).disposed(by: disposBag)
         
-        nameValid.bind(to: pwdTF.rx.isEnabled).disposed(by: disposBag)
-        everythingValid.bind(to: login.rx.isEnabled).disposed(by: disposBag)
-        login.rx.tap.subscribe(onDisposed:  {
+        
+        viewModel = LoginViewModel(username: nameTF.rx.text.orEmpty.asObservable(), password: pwdTF.rx.text.orEmpty.asObservable())
+        viewModel.usernameValid.bind(to: pwdTF.rx.isEnabled).disposed(by: disposBag)
+        viewModel.everythingValid.bind(to: login.rx.isEnabled).disposed(by: disposBag)
+        login.rx.tap.subscribe {
             print("开始登录")
-        }).disposed(by: disposBag)
+        }.disposed(by: disposBag)
+
     }
     
     //MARK: - ui

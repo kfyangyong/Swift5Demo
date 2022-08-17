@@ -12,6 +12,15 @@ import RxCocoa
 
 class MusicViewController: BaseViewController {
     
+    //RxSwift计数问题
+    // 内部序列响应，不被外界影响
+    fileprivate var mySubject = PublishSubject<Any>()
+    var publicOB : Observable<Any>{
+        // 重置激活
+        mySubject = PublishSubject<Any>()
+        return mySubject.asObservable()
+    }
+    
     let musicViewModel = MusicListViewModel()
     //负责对象销毁
     let disposeBag = DisposeBag()
@@ -29,9 +38,10 @@ class MusicViewController: BaseViewController {
             
         }.disposed(by: disposeBag)
         
-        tableView.rx.modelSelected(Music.self).subscribe { music in
+        tableView.rx.modelSelected(Music.self)
+            .subscribe { music in
             print("选中歌曲\(music)")
-        }
+            }
         
         
         let lab = UILabel()
@@ -62,11 +72,117 @@ class MusicViewController: BaseViewController {
             make.height.equalTo(30)
             make.centerX.equalToSuperview()
         }
-        
-        
+        testBehaviorRelay()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        mySubject.onNext(12)
+    }
+    
+    
+    //BehaviorRelay替换原来的Variable
+    //可以储存一个信号
+    //随时订阅响应
+    //响应发送的时候要注意：behaviorR.accept(20)
+    func testBehaviorRelay() {
+        let behaviorRelay = BehaviorRelay(value: 100)
+        behaviorRelay.subscribe {  (num) in
+            print(num)
+        }.disposed(by: disposeBag)
+        print("打印:\(behaviorRelay.value)")
+        behaviorRelay.accept(20)
+        behaviorRelay.accept(202)
+        behaviorRelay.accept(201)
+        /*
+         next(100)
+         打印:100
+         next(20)
+         next(202)
+         next(201)
+         */
+    }
+    
+    // AsyncSubject
+    //只发送由源Observable发送的最后一个事件，并且只在源Observable完成之后。
+    func testAsyncSubject() {
+        // 1:创建序列
+        let asynSub = AsyncSubject<Int>.init()
+        // 2:发送信号
+        asynSub.onNext(1)
+        asynSub.onNext(2)
+        // 3:订阅序列
+        asynSub.subscribe{ print("订阅到了:",$0)}
+            .disposed(by: disposeBag)
+        // 再次发送
+        asynSub.onNext(3)
+        asynSub.onNext(4)
+        //        asynSub.onError(NSError.init(domain: "lgcooci", code: 10086, userInfo: nil))
+        asynSub.onCompleted()
+        /*
+         订阅到了: next(4)
+         订阅到了: completed
+         */
+    }
+    
+    func testReplaySubject() {
+        // 1:创建序列
+        // bufferSize 缓存的空间
+//        let replaySub = ReplaySubject<Int>.create(bufferSize: 2)
+        
+         let replaySub = ReplaySubject<Int>.createUnbounded()
+
+        // 2:发送信号
+        replaySub.onNext(1)
+        replaySub.onNext(2)
+        replaySub.onNext(3)
+        replaySub.onNext(4)
+
+        // 3:订阅序列
+        replaySub.subscribe{ print("订阅到了:",$0)}
+            .disposed(by: disposeBag)
+        // 再次发送
+        replaySub.onNext(7)
+        replaySub.onNext(8)
+        replaySub.onNext(9)
+        
+        /*
+         bufferSize: 2
+         订阅到了: next(3)
+         订阅到了: next(4)
+         订阅到了: next(7)
+         订阅到了: next(8)
+         订阅到了: next(9)
+         
+         //createUnbounded
+         订阅到了: next(1)
+         订阅到了: next(2)
+         订阅到了: next(3)
+         订阅到了: next(4)
+         订阅到了: next(7)
+         订阅到了: next(8)
+         订阅到了: next(9)
+         */
+        
+        // AsyncSubject
+        // 1:创建序列
+        let asynSub = AsyncSubject<Int>.init()
+        // 2:发送信号
+        asynSub.onNext(1)
+        asynSub.onNext(2)
+        // 3:订阅序列
+        asynSub.subscribe{ print("订阅到了:",$0)}
+            .disposed(by: disposeBag)
+        // 再次发送
+        asynSub.onNext(3)
+        asynSub.onNext(4)
+        //        asynSub.onError(NSError.init(domain: "lgcooci", code: 10086, userInfo: nil))
+        asynSub.onCompleted()
+
+    }
+    
     //将数字转成对应的富文本
-        func formatTimeInterval(ms: NSInteger) -> NSMutableAttributedString {
+    func formatTimeInterval(ms: NSInteger) -> NSMutableAttributedString {
             let string = String(format: "%0.2d:%0.2d.%0.2d",
                                 arguments: [(ms / 600) % 600, (ms % 600 ) / 10, ms % 10])
             //富文本设置

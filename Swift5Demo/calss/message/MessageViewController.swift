@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 enum PickerDataSource {
     case yearPicker
     case typePicker
@@ -34,6 +35,8 @@ protocol SearchViewControllerProtocol {
 }
 
 class MessageViewController: BaseViewController {
+        
+    let lab: UILabel = UILabel()
     
     var doneButton: UIButton!
     var titleField: UITextField!
@@ -47,10 +50,12 @@ class MessageViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         subUI()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
 //        let arr = [12,2,555,35,154,33,25,65,3]
 //        quickSort(arr: arr)
     }
@@ -180,7 +185,7 @@ extension MessageViewController {
         }
         return preArray
     }
-
+    
     //冒泡排序 优化
     func bubbleSortBetter(arr: [Int]) -> [Int] {
         guard !arr.isEmpty else {
@@ -280,9 +285,9 @@ extension MessageViewController {
     //堆排序
     /*
      大顶堆：每个节点的值都大于或等于其子节点的值，在堆排序算法中用于升序排列；
-
+     
      小顶堆：每个节点的值都小于或等于其子节点的值，在堆排序算法中用于降序排列；
-
+     
      堆排序的平均时间复杂度为 Ο(nlogn)
      */
     func heapSort(array: [Int]) -> [Int] {

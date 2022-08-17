@@ -10,6 +10,12 @@ import UIKit
 import MBProgressHUD
 import RxSwift
 
+struct Car {
+    var speed: Float = 0.0
+    var increaseSpeed: (() -> ())?
+}
+
+
 class HomeViewController: UIViewController {
     
     var titles: [String] = []
@@ -18,6 +24,10 @@ class HomeViewController: UIViewController {
         tab.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tab.delegate = self
         tab.dataSource = self
+        if #available(iOS 13.0, *) {
+            tab.automaticallyAdjustsScrollIndicatorInsets = false
+            tab.autoresizesSubviews = false
+        }
         return tab
     }()
     
@@ -39,12 +49,12 @@ class HomeViewController: UIViewController {
                    "MusicViewController",
                    "RXViewController",
                    "DriverViewController",
+                   "CustomViewController",
                    "TestViewController"]
-        
         
         print("********emty********")
         
-        var emtyOb = Observable<Int>.empty()
+        let emtyOb = Observable<Int>.empty()
         _ = emtyOb.subscribe(onNext: { (number) in
             print("订阅:",number)
         }, onError: { (error) in
@@ -59,11 +69,6 @@ class HomeViewController: UIViewController {
         //MARK:  just
         // 单个信号序列创建
         let array = ["LG_Cooci","LG_Kody"]
-//        Observable<[String]>.just(array)
-//            .subscribe { (event) in
-//                print("event" + "\(event)")
-//            }.disposed(by: disposeBag)
-
         _ = Observable<[String]>.just(array).subscribe(onNext: { (number) in
             print("订阅:",number)
         }, onError: { (error) in
@@ -73,9 +78,31 @@ class HomeViewController: UIViewController {
         }) {
             print("释放回调")
         }
+        
+        testAlterMesasge()
 
     }
     
+    func testAlterMesasge() {
+        print("testAlterMesasge")
+        // 这里是为什么结构体中不使用 闭包的原因； 结构体是值类型，闭包是引用类型，易造成循环引用，内存泄露
+        var myCar = Car()
+        myCar.increaseSpeed = { //[weak myCar] in
+            myCar.speed += 30
+        }
+        myCar.increaseSpeed?()
+        print("1: My car's speed \n\(myCar.speed)")
+
+        var myNewCar = myCar
+        print("2: My new car's speed \n\(myNewCar.speed)")
+
+        myNewCar.increaseSpeed?()
+        print("3: My new car's speed \n\(myNewCar.speed)")
+
+        myCar.increaseSpeed?()
+        print("4: My car's speed \n\(myCar.speed)")
+        print("5: My new car's speed \n\(myNewCar.speed)")
+    }
     
     
 }
@@ -128,12 +155,19 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         case 9:
             let vc = MusicViewController()
+            vc.publicOB
+               .subscribe(onNext: { (item) in
+                   print("MusicViewController 订阅到 \(item)")
+               }).disposed(by: vc.disposeBag)
             navigationController?.pushViewController(vc, animated: true)
         case 10:
             let vc = RXViewController()
             navigationController?.pushViewController(vc, animated: true)
         case 11:
             let vc = DriverViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case 12:
+            let vc = CustomViewController(type: 1)
             navigationController?.pushViewController(vc, animated: true)
         default:
             let vc = TestViewController()

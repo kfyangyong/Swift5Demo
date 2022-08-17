@@ -20,8 +20,11 @@ class Swift5DemoTests: XCTestCase {
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let model: HomeModel = HomeModel()
+        XCTAssertNil(model)
+        XCTAssertTrue(model.age == 0)
+        
     }
 
     func testPerformanceExample() {
