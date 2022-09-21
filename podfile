@@ -39,4 +39,8 @@ target 'Swift5Demo' do
    #多页面
    pod 'JXSegmentedView'
    
+   # Testing
+    target 'Swift5DemoTests' do
+
+    end
 end
