@@ -61,6 +61,19 @@
 		DD811A8F28E6ECAA0011E94B /* StringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD811A8E28E6ECAA0011E94B /* StringViewController.swift */; };
 		DD8594612808141E00F1DB27 /* UIView_rxswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8594602808141E00F1DB27 /* UIView_rxswift.swift */; };
 		DD89B3AE28AC80C10080E61B /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89B3AD28AC80C10080E61B /* AnimationViewController.swift */; };
+		DD89D25D2918AF7E0023A629 /* swiftBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D25C2918AF7E0023A629 /* swiftBase.swift */; };
+		DD89D25F2918B4190023A629 /* aboutCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D25E2918B4190023A629 /* aboutCollection.swift */; };
+		DD89D2612918B74D0023A629 /* httpDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D2602918B74D0023A629 /* httpDoc.swift */; };
+		DD89D2632918B8D00023A629 /* notifyDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D2622918B8D00023A629 /* notifyDoc.swift */; };
+		DD89D2652918B8FE0023A629 /* appDelegateDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D2642918B8FE0023A629 /* appDelegateDoc.swift */; };
+		DD89D2672918B94E0023A629 /* gcdDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D2662918B94E0023A629 /* gcdDoc.swift */; };
+		DD89D2692918BA350023A629 /* memoryDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D2682918BA350023A629 /* memoryDoc.swift */; };
+		DD89D26B2918CFD70023A629 /* touchDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D26A2918CFD70023A629 /* touchDoc.swift */; };
+		DD89D26D2918D0590023A629 /* viewDoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D26C2918D0590023A629 /* viewDoc.swift */; };
+		DD89D26F2918D1260023A629 /* UIColorAuto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D26E2918D1260023A629 /* UIColorAuto.swift */; };
+		DD89D2712918D1320023A629 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D2702918D1320023A629 /* Delegate.swift */; };
+		DD89D2732918D2AC0023A629 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D2722918D2AC0023A629 /* Runtime.swift */; };
+		DD89D2752918D7BD0023A629 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89D2742918D7BD0023A629 /* Image.swift */; };
 		DD8DF5532718651200B82EBB /* GcdTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8DF5522718651200B82EBB /* GcdTimer.swift */; };
 		DD92E06725C7AC9B00526D08 /* TestAnimations in Resources */ = {isa = PBXBuildFile; fileRef = DD92E06625C7AC9B00526D08 /* TestAnimations */; };
 		DD954DF0265F95B70095D9F7 /* AttributStrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954DEF265F95B70095D9F7 /* AttributStrViewController.swift */; };
@@ -227,6 +240,19 @@
 		DD811A8E28E6ECAA0011E94B /* StringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringViewController.swift; sourceTree = "<group>"; };
 		DD8594602808141E00F1DB27 /* UIView_rxswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_rxswift.swift; sourceTree = "<group>"; };
 		DD89B3AD28AC80C10080E61B /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		DD89D25C2918AF7E0023A629 /* swiftBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swiftBase.swift; sourceTree = "<group>"; };
+		DD89D25E2918B4190023A629 /* aboutCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutCollection.swift; sourceTree = "<group>"; };
+		DD89D2602918B74D0023A629 /* httpDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = httpDoc.swift; sourceTree = "<group>"; };
+		DD89D2622918B8D00023A629 /* notifyDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notifyDoc.swift; sourceTree = "<group>"; };
+		DD89D2642918B8FE0023A629 /* appDelegateDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appDelegateDoc.swift; sourceTree = "<group>"; };
+		DD89D2662918B94E0023A629 /* gcdDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gcdDoc.swift; sourceTree = "<group>"; };
+		DD89D2682918BA350023A629 /* memoryDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoryDoc.swift; sourceTree = "<group>"; };
+		DD89D26A2918CFD70023A629 /* touchDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touchDoc.swift; sourceTree = "<group>"; };
+		DD89D26C2918D0590023A629 /* viewDoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewDoc.swift; sourceTree = "<group>"; };
+		DD89D26E2918D1260023A629 /* UIColorAuto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorAuto.swift; sourceTree = "<group>"; };
+		DD89D2702918D1320023A629 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		DD89D2722918D2AC0023A629 /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
+		DD89D2742918D7BD0023A629 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		DD8DF5522718651200B82EBB /* GcdTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GcdTimer.swift; sourceTree = "<group>"; };
 		DD92E06625C7AC9B00526D08 /* TestAnimations */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestAnimations; sourceTree = "<group>"; };
 		DD954DEF265F95B70095D9F7 /* AttributStrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributStrViewController.swift; sourceTree = "<group>"; };
@@ -817,6 +843,10 @@
 				DD8DF5522718651200B82EBB /* GcdTimer.swift */,
 				DD8594602808141E00F1DB27 /* UIView_rxswift.swift */,
 				DD02886128881BC900AE8667 /* Math.swift */,
+				DD89D26E2918D1260023A629 /* UIColorAuto.swift */,
+				DD89D2702918D1320023A629 /* Delegate.swift */,
+				DD89D2722918D2AC0023A629 /* Runtime.swift */,
+				DD89D2742918D7BD0023A629 /* Image.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -875,6 +905,15 @@
 				DDD98D3428B4739B00C441DF /* ReadMemory.swift */,
 				DDD98D3628B4859200C441DF /* ReadApp.swift */,
 				DDD98D3828B4A89E00C441DF /* ReadDesignPattern.swift */,
+				DD89D25C2918AF7E0023A629 /* swiftBase.swift */,
+				DD89D25E2918B4190023A629 /* aboutCollection.swift */,
+				DD89D2602918B74D0023A629 /* httpDoc.swift */,
+				DD89D2622918B8D00023A629 /* notifyDoc.swift */,
+				DD89D2642918B8FE0023A629 /* appDelegateDoc.swift */,
+				DD89D2662918B94E0023A629 /* gcdDoc.swift */,
+				DD89D2682918BA350023A629 /* memoryDoc.swift */,
+				DD89D26A2918CFD70023A629 /* touchDoc.swift */,
+				DD89D26C2918D0590023A629 /* viewDoc.swift */,
 			);
 			path = readDoc;
 			sourceTree = "<group>";
@@ -1207,14 +1246,19 @@
 				DD8DF5532718651200B82EBB /* GcdTimer.swift in Sources */,
 				DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */,
 				DDA149A725B2C6A30040E1CD /* ActiveLabelViewController.swift in Sources */,
+				DD89D2612918B74D0023A629 /* httpDoc.swift in Sources */,
 				DD33CBC2266A07D30086D5B4 /* LFMP4Atom.m in Sources */,
 				DD811A8F28E6ECAA0011E94B /* StringViewController.swift in Sources */,
 				DDD1E9E825F8B2BF00E49CF6 /* Array.swift in Sources */,
 				DDB48A992604A5EF0071E301 /* CSSystemCapture.swift in Sources */,
+				DD89D26D2918D0590023A629 /* viewDoc.swift in Sources */,
+				DD89D2732918D2AC0023A629 /* Runtime.swift in Sources */,
+				DD89D2712918D1320023A629 /* Delegate.swift in Sources */,
 				DDC60AAC233A126800BEC45C /* ShareViewController.swift in Sources */,
 				DDE22C41260880DC001038B8 /* CSAudioEncoder.swift in Sources */,
 				DD02886228881BC900AE8667 /* Math.swift in Sources */,
 				DD33CBEB266A21280086D5B4 /* LFGPUImageBeautyFilter.m in Sources */,
+				DD89D2672918B94E0023A629 /* gcdDoc.swift in Sources */,
 				DDD98D4928B4B2B900C441DF /* GreetingMVVMViewController.swift in Sources */,
 				DD12805B25C5028D00751B98 /* UserApi.swift in Sources */,
 				DD6709C125F0B4AD00C9927D /* TabManagerViewController.swift in Sources */,
@@ -1242,6 +1286,7 @@
 				DDFED38725C398300056FF9C /* DispatchIOManager.swift in Sources */,
 				DDAD127C28B73FE100E20C50 /* AppUI.swift in Sources */,
 				DDA149A925B2CADC0040E1CD /* BaseViewController.swift in Sources */,
+				DD89D2652918B8FE0023A629 /* appDelegateDoc.swift in Sources */,
 				DD1A8E4626B2B5AF00572F12 /* Loger.swift in Sources */,
 				DD969619265238C100AD7845 /* RxTableViewController.swift in Sources */,
 				DDD98D4728B4B20200C441DF /* GreetingViewModel.swift in Sources */,
@@ -1259,18 +1304,23 @@
 				DDD98D4528B4B1D100C441DF /* Person1.swift in Sources */,
 				DDE68DCD25F9FFB200F39601 /* Shaders.metal in Sources */,
 				DDFED38525C2C0D10056FF9C /* DispatchSourceTest.swift in Sources */,
+				DD89D2632918B8D00023A629 /* notifyDoc.swift in Sources */,
 				DDFBD93228DAA493005723B2 /* UserChartView.swift in Sources */,
 				DDC60A9B2339FBBB00BEC45C /* MessageViewController.swift in Sources */,
 				DD67B40625C250B30016C60D /* GCDViewController.swift in Sources */,
+				DD89D26F2918D1260023A629 /* UIColorAuto.swift in Sources */,
 				DDD1E9D825F86CD300E49CF6 /* AnswerModel.swift in Sources */,
 				DD12805D25C5051700751B98 /* UserTargetType.swift in Sources */,
 				DDE68DC925F9FC6100F39601 /* MetalView.swift in Sources */,
 				DD97203725E39D86003E1FB1 /* PhotosViewController.swift in Sources */,
 				DDD98D5228B4B5AD00C441DF /* GreetingViewEventHandler.swift in Sources */,
+				DD89D2752918D7BD0023A629 /* Image.swift in Sources */,
 				DDD1E9DA25F8776E00E49CF6 /* TiConfig.swift in Sources */,
 				DD7E08F125F0BEBA002281D4 /* TiImageCell.swift in Sources */,
 				DDC60AAE233A129700BEC45C /* YYTabbarViewController.swift in Sources */,
 				DD10C081233B6C030035D158 /* MoyaConfig.swift in Sources */,
+				DD89D25D2918AF7E0023A629 /* swiftBase.swift in Sources */,
+				DD89D2692918BA350023A629 /* memoryDoc.swift in Sources */,
 				DD33CBDA266A20920086D5B4 /* LFH264VideoEncoder.m in Sources */,
 				DD79312D26B554D1001F23EC /* Base.swift in Sources */,
 				DDAD127728B720F900E20C50 /* PrototypeExample.swift in Sources */,
@@ -1295,6 +1345,7 @@
 				DD55E8F427B23DD500773488 /* UIViewController+KingfisherOperation.swift in Sources */,
 				DDD892CE25F5D26500FF4085 /* TiBaseViewController.swift in Sources */,
 				DDD98D3E28B4ADC300C441DF /* GreetingPresenter.swift in Sources */,
+				DD89D25F2918B4190023A629 /* aboutCollection.swift in Sources */,
 				DDD1E9E625F8A0FC00E49CF6 /* PaixuViewController.swift in Sources */,
 				DD8594612808141E00F1DB27 /* UIView_rxswift.swift in Sources */,
 				DD0481D82717DFD60094A929 /* MovieDataViewModel.swift in Sources */,
@@ -1306,6 +1357,7 @@
 				DDD98D5A28B4DC4B00C441DF /* Factory.swift in Sources */,
 				DDD98D3528B4739B00C441DF /* ReadMemory.swift in Sources */,
 				DDD98D4C28B4B51800C441DF /* Person2.swift in Sources */,
+				DD89D26B2918CFD70023A629 /* touchDoc.swift in Sources */,
 				DDD98D3228B4716F00C441DF /* ReadGCD.swift in Sources */,
 				DDD892D125F5F51100FF4085 /* TiViewController.swift in Sources */,
 				DD0481D52717DBD00094A929 /* MovieListViewController.swift in Sources */,
