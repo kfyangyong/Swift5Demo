@@ -8,6 +8,7 @@
 
 import Foundation
 
+//需要创建一个可能有许多配置选项的对象时
 protocol DomainModel {
     //公共属性
     

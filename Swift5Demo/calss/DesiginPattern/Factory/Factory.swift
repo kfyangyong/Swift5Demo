@@ -6,13 +6,16 @@
 //  Copyright © 2022 com.ayong.myapp. All rights reserved.
 //
 
+//MARK: -  工厂方法生产一种产品，产品型号不同
+
 import Foundation
 
+// Creator 创造者;
 protocol Creator {
-
     func factoryMethod() -> Product
     func someOperation() -> String
 }
+
 extension Creator {
     func someOperation() -> String {
         let product = factoryMethod()
@@ -50,9 +53,12 @@ class ConcreteProduct2: Product {
     }
 }
 
-class Client {
-    // ...
+// Client委托人
+class FactoryClient {
+    /// 生产产品
+    /// - Parameter creator: 传入生产者
     static func someClientCode(creator: Creator) {
+        
         print("Client: I'm not aware of the creator's class, but it still works.\n"
             + creator.someOperation())
     }

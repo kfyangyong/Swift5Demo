@@ -50,7 +50,10 @@ class HomeViewController: UIViewController {
                    "RXViewController",
                    "DriverViewController",
                    "CustomViewController",
-                   "TestViewController"]
+                   "ChartViewController",
+                   
+                   "TestViewController",
+        ]
         
         print("********emty********")
         
@@ -169,6 +172,10 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         case 12:
             let vc = CustomViewController(type: 1)
             navigationController?.pushViewController(vc, animated: true)
+        case 13:
+            let vc = ChartViewController()
+            navigationController?.pushViewController(vc, animated: true)
+
         default:
             let vc = TestViewController()
             navigationController?.pushViewController(vc, animated: true)

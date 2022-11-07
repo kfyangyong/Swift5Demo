@@ -27,10 +27,10 @@ class FactoryTests: XCTestCase {
     func testFactoryMethodConceptual() {
         
         print("App: Launched with the ConcreteCreator1.")
-        Client.someClientCode(creator: ConcreteCreator1())
+        FactoryClient.someClientCode(creator: ConcreteCreator1())
 
         print("\nApp: Launched with the ConcreteCreator2.")
-        Client.someClientCode(creator: ConcreteCreator2())
+        FactoryClient.someClientCode(creator: ConcreteCreator2())
     }
 
     func testPerformanceExample() throws {

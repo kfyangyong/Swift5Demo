@@ -42,4 +42,30 @@ import Foundation
  按需加载
  */
 
+/*
+ 
+ 协议和扩展
+ 
+ swift可以直接定义函数类型的变量，可以作为其他函数参数传递们可以作为返回值。
+ 支持函数式编程
+ 
+ oc则没有这么强大
+ */
 
+//MARK: - swift 工具
+/*
+ llvm: 是多种语言的编译器
+ 
+ 编译
+ swift --parse--> AST --sema--silgen--> SIL --analysis--irgen--> IR --llvm--> *.o文件（可执行文件）
+ 
+ main.swift 为例
+ 
+ swiftc -o main.out main.swift
+ 生成ast文件： swiftc main.swift -dump-ast
+ 生成SIL文件： swiftc main.swift -emit-sil
+ 生成LLVM IR文件：swiftc main.swift -meit-ir
+ 生成Assembly language: swiftc main.swift -emit-assembly
+ 
+ 
+ */

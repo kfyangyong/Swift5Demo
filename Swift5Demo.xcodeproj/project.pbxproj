@@ -41,6 +41,8 @@
 		DD4267FC25C4131000CB98A1 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FB25C4131000CB98A1 /* Api.swift */; };
 		DD4267FE25C4145900CB98A1 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FD25C4145900CB98A1 /* ResultModel.swift */; };
 		DD42680025C4182200CB98A1 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4267FF25C4182200CB98A1 /* TargetType.swift */; };
+		DD4B005828F7FF6D00BF00D6 /* AdapterConceptual.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4B005728F7FF6D00BF00D6 /* AdapterConceptual.swift */; };
+		DD4B005B28F8027100BF00D6 /* BridgeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4B005A28F8027100BF00D6 /* BridgeExample.swift */; };
 		DD55E8F427B23DD500773488 /* UIViewController+KingfisherOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD55E8F327B23DD500773488 /* UIViewController+KingfisherOperation.swift */; };
 		DD5EBBCE261310BA00C09CE0 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5EBBCD261310BA00C09CE0 /* MusicViewController.swift */; };
 		DD61E7B726553066003EA3C9 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD61E7B626553066003EA3C9 /* UIViewController+Rx.swift */; };
@@ -56,6 +58,7 @@
 		DD7E08F325F0C600002281D4 /* TiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E08F225F0C600002281D4 /* TiModel.swift */; };
 		DD7E08F525F0CC94002281D4 /* TiTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E08F425F0CC94002281D4 /* TiTitleCell.swift */; };
 		DD7E08F725F0CDDF002281D4 /* OptionAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7E08F625F0CDDF002281D4 /* OptionAnswerCell.swift */; };
+		DD811A8F28E6ECAA0011E94B /* StringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD811A8E28E6ECAA0011E94B /* StringViewController.swift */; };
 		DD8594612808141E00F1DB27 /* UIView_rxswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8594602808141E00F1DB27 /* UIView_rxswift.swift */; };
 		DD89B3AE28AC80C10080E61B /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89B3AD28AC80C10080E61B /* AnimationViewController.swift */; };
 		DD8DF5532718651200B82EBB /* GcdTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8DF5522718651200B82EBB /* GcdTimer.swift */; };
@@ -128,6 +131,8 @@
 		DDE68DCD25F9FFB200F39601 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = DDE68DCC25F9FFB200F39601 /* Shaders.metal */; };
 		DDE68DCF25F9FFE800F39601 /* MetalView03.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE68DCE25F9FFE800F39601 /* MetalView03.swift */; };
 		DDEF1B4C25C7C81B001707CB /* AniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEF1B4B25C7C81B001707CB /* AniViewController.swift */; };
+		DDFBD93028DAA470005723B2 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFBD92F28DAA470005723B2 /* ChartViewController.swift */; };
+		DDFBD93228DAA493005723B2 /* UserChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFBD93128DAA493005723B2 /* UserChartView.swift */; };
 		DDFED38325C2AE210056FF9C /* SuspendAndResum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFED38225C2AE210056FF9C /* SuspendAndResum.swift */; };
 		DDFED38525C2C0D10056FF9C /* DispatchSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFED38425C2C0D10056FF9C /* DispatchSourceTest.swift */; };
 		DDFED38725C398300056FF9C /* DispatchIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFED38625C398300056FF9C /* DispatchIOManager.swift */; };
@@ -201,6 +206,9 @@
 		DD4267FB25C4131000CB98A1 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		DD4267FD25C4145900CB98A1 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		DD4267FF25C4182200CB98A1 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		DD4B005428F7FF5400BF00D6 /* Swift5DemoTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift5DemoTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		DD4B005728F7FF6D00BF00D6 /* AdapterConceptual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterConceptual.swift; sourceTree = "<group>"; };
+		DD4B005A28F8027100BF00D6 /* BridgeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeExample.swift; sourceTree = "<group>"; };
 		DD55E8F327B23DD500773488 /* UIViewController+KingfisherOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+KingfisherOperation.swift"; sourceTree = "<group>"; };
 		DD5EBBCD261310BA00C09CE0 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		DD61E7B626553066003EA3C9 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
@@ -216,6 +224,7 @@
 		DD7E08F225F0C600002281D4 /* TiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiModel.swift; sourceTree = "<group>"; };
 		DD7E08F425F0CC94002281D4 /* TiTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiTitleCell.swift; sourceTree = "<group>"; };
 		DD7E08F625F0CDDF002281D4 /* OptionAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionAnswerCell.swift; sourceTree = "<group>"; };
+		DD811A8E28E6ECAA0011E94B /* StringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringViewController.swift; sourceTree = "<group>"; };
 		DD8594602808141E00F1DB27 /* UIView_rxswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_rxswift.swift; sourceTree = "<group>"; };
 		DD89B3AD28AC80C10080E61B /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		DD8DF5522718651200B82EBB /* GcdTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GcdTimer.swift; sourceTree = "<group>"; };
@@ -294,6 +303,8 @@
 		DDE68DCC25F9FFB200F39601 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		DDE68DCE25F9FFE800F39601 /* MetalView03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView03.swift; sourceTree = "<group>"; };
 		DDEF1B4B25C7C81B001707CB /* AniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniViewController.swift; sourceTree = "<group>"; };
+		DDFBD92F28DAA470005723B2 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		DDFBD93128DAA493005723B2 /* UserChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChartView.swift; sourceTree = "<group>"; };
 		DDFED38225C2AE210056FF9C /* SuspendAndResum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuspendAndResum.swift; sourceTree = "<group>"; };
 		DDFED38425C2C0D10056FF9C /* DispatchSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchSourceTest.swift; sourceTree = "<group>"; };
 		DDFED38625C398300056FF9C /* DispatchIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchIOManager.swift; sourceTree = "<group>"; };
@@ -473,6 +484,14 @@
 			path = filter;
 			sourceTree = "<group>";
 		};
+		DD4B005928F8025100BF00D6 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				DD4B005A28F8027100BF00D6 /* BridgeExample.swift */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
 		DD55E8F227B23D5D00773488 /* kf */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +558,14 @@
 				DD33CBCA266A101E0086D5B4 /* LFNALUnit.hpp */,
 			);
 			path = h264;
+			sourceTree = "<group>";
+		};
+		DD811A8D28E6EAE40011E94B /* String */ = {
+			isa = PBXGroup;
+			children = (
+				DD811A8E28E6ECAA0011E94B /* StringViewController.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		DD89B3AC28AC80780080E61B /* animation */ = {
@@ -680,7 +707,9 @@
 				DDAD127128B7110D00E20C50 /* BuilderExampleTests.swift */,
 				DDAD127828B7268800E20C50 /* PrototypeClientTests.swift */,
 				DDAD128028B747A900E20C50 /* SingletonExampleTests.swift */,
+				DD4B005728F7FF6D00BF00D6 /* AdapterConceptual.swift */,
 				DDC60A832339ED6F00BEC45C /* Info.plist */,
+				DD4B005428F7FF5400BF00D6 /* Swift5DemoTests-Bridging-Header.h */,
 			);
 			path = Swift5DemoTests;
 			sourceTree = "<group>";
@@ -753,9 +782,9 @@
 		DDC60AA3233A11F000BEC45C /* message */ = {
 			isa = PBXGroup;
 			children = (
+				DD811A8D28E6EAE40011E94B /* String */,
 				DDD097C22716EF5300228E55 /* Mvvm */,
 				DDC60A9A2339FBBB00BEC45C /* MessageViewController.swift */,
-				DD0481D42717DBD00094A929 /* MovieListViewController.swift */,
 			);
 			path = message;
 			sourceTree = "<group>";
@@ -814,6 +843,7 @@
 		DDD097C22716EF5300228E55 /* Mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				DD0481D42717DBD00094A929 /* MovieListViewController.swift */,
 				DD0481D62717DF9B0094A929 /* ViewModel */,
 				DD0481CF2717C9640094A929 /* model */,
 				DD0481CE2717C95C0094A929 /* view */,
@@ -884,6 +914,7 @@
 		DDD98D5728B4DBCB00C441DF /* DesiginPattern */ = {
 			isa = PBXGroup;
 			children = (
+				DD4B005928F8025100BF00D6 /* Bridge */,
 				DDAD128228B749BF00E20C50 /* Adapter */,
 				DDAD127D28B7458F00E20C50 /* Singleton */,
 				DDAD127528B720E300E20C50 /* Prototype */,
@@ -940,6 +971,8 @@
 		DDFBD92E28DAA17E005723B2 /* Chart */ = {
 			isa = PBXGroup;
 			children = (
+				DDFBD92F28DAA470005723B2 /* ChartViewController.swift */,
+				DDFBD93128DAA493005723B2 /* UserChartView.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -1020,6 +1053,7 @@
 					};
 					DDC60A7C2339ED6F00BEC45C = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1400;
 						TestTargetID = DDC60A662339ED6E00BEC45C;
 					};
 					DDC60A872339ED6F00BEC45C = {
@@ -1174,6 +1208,7 @@
 				DDD892D325F5FD1C00FF4085 /* BottomView.swift in Sources */,
 				DDA149A725B2C6A30040E1CD /* ActiveLabelViewController.swift in Sources */,
 				DD33CBC2266A07D30086D5B4 /* LFMP4Atom.m in Sources */,
+				DD811A8F28E6ECAA0011E94B /* StringViewController.swift in Sources */,
 				DDD1E9E825F8B2BF00E49CF6 /* Array.swift in Sources */,
 				DDB48A992604A5EF0071E301 /* CSSystemCapture.swift in Sources */,
 				DDC60AAC233A126800BEC45C /* ShareViewController.swift in Sources */,
@@ -1224,6 +1259,7 @@
 				DDD98D4528B4B1D100C441DF /* Person1.swift in Sources */,
 				DDE68DCD25F9FFB200F39601 /* Shaders.metal in Sources */,
 				DDFED38525C2C0D10056FF9C /* DispatchSourceTest.swift in Sources */,
+				DDFBD93228DAA493005723B2 /* UserChartView.swift in Sources */,
 				DDC60A9B2339FBBB00BEC45C /* MessageViewController.swift in Sources */,
 				DD67B40625C250B30016C60D /* GCDViewController.swift in Sources */,
 				DDD1E9D825F86CD300E49CF6 /* AnswerModel.swift in Sources */,
@@ -1248,6 +1284,7 @@
 				DDD98D6328B4FEE500C441DF /* Conceptual.swift in Sources */,
 				DD33CBE4266A20E10086D5B4 /* LFLiveAudioConfiguration.m in Sources */,
 				DD7E08F325F0C600002281D4 /* TiModel.swift in Sources */,
+				DDFBD93028DAA470005723B2 /* ChartViewController.swift in Sources */,
 				DDC60A9F2339FBEB00BEC45C /* HomeViewController.swift in Sources */,
 				DD33CBBF266A07520086D5B4 /* LFVideoEncoder.m in Sources */,
 				DDE22C43260891A7001038B8 /* CSAudioConfig.swift in Sources */,
@@ -1282,10 +1319,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDD98D5E28B4EE2D00C441DF /* FactoryTests.swift in Sources */,
+				DD4B005828F7FF6D00BF00D6 /* AdapterConceptual.swift in Sources */,
 				DDAD127928B7268800E20C50 /* PrototypeClientTests.swift in Sources */,
 				DDAD127228B7110D00E20C50 /* BuilderExampleTests.swift in Sources */,
 				DDAD128128B747A900E20C50 /* SingletonExampleTests.swift in Sources */,
 				DDC60A822339ED6F00BEC45C /* Swift5DemoTests.swift in Sources */,
+				DD4B005B28F8027100BF00D6 /* BridgeExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1497,6 +1536,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Swift5DemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1507,6 +1547,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayong.Swift5DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift5DemoTests/Swift5DemoTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift5Demo.app/Swift5Demo";
@@ -1519,6 +1561,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Swift5DemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1529,6 +1572,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayong.Swift5DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift5DemoTests/Swift5DemoTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift5Demo.app/Swift5Demo";
